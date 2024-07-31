@@ -2,7 +2,7 @@ import React from 'react';
 import "./style.css";
 
 //components
-import { Box } from '@mui/material';
+import { Box, Typography } from '@mui/material';
 import NavBar from '../../Components/NavBar';
 
 //images
@@ -14,7 +14,15 @@ export default function Home({ activeNav, setActiveNav }) {
       <Box className="homeContainer">
         <NavBar activeNav={activeNav} setActiveNav={setActiveNav} />
         <Box className="heroSection">
-          <img src={brainImg} />
+          <img src={brainImg} className='brainImg' />
+
+          <Typography className="heroHeader1">Unleash Your Productivity Creativity Potential Business</Typography>
+          <Typography className="heroHeader2">Unleash your creative potential</Typography>
+          <Typography className="heroHeader3">with HaveLink</Typography>
+
+          <Box className="HeroBtn">
+            <Typography>Get Your Personalized Solution !</Typography>
+          </Box>
         </Box>
 
 

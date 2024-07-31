@@ -3,6 +3,16 @@
   src: url("./Assets/Fonts/creato_display/CreatoDisplay-Regular.otf")
     format("truetype");
 }
+@font-face {
+  font-family: "Archivo";
+  src: url("./Assets/Fonts/Archivo/Archivo-VariableFont_wdth\,wght.ttf")
+    format("truetype");
+}
+@font-face {
+  font-family: "Archivo_Black";
+  src: url("./Assets/Fonts/Archivo_Black/ArchivoBlack-Regular.ttf")
+    format("truetype");
+}
 * {
   box-sizing: border-box;
   margin: 0;
