@@ -1,0 +1,48 @@
+.NavBar {
+  width: 100%;
+  height: 160px;
+  display: flex;
+  flex-direction: row;
+  padding: 0 5%;
+}
+.cLogoBox {
+  width: 30%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.cLogoBox img {
+  width: 140px;
+  cursor: pointer;
+}
+.NavItemsBox {
+  width: 70%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 65px;
+}
+.navItem p {
+  font-size: 18px !important;
+  font-weight: 700 !important;
+  color: #fff;
+}
+.navItem {
+  cursor: pointer;
+  transition: all 0.5s;
+}
+.navItemActive {
+  height: 34px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20px;
+  background: rgb(0, 130, 222);
+  background: linear-gradient(
+    180deg,
+    rgba(0, 130, 222, 1) 0%,
+    rgba(88, 248, 140, 1) 80%
+  );
+  border-radius: 38px;
+}

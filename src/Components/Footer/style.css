@@ -1,0 +1,77 @@
+.footer {
+  width: 100%;
+  padding: 0 3%;
+}
+.mapBox {
+  width: 100%;
+  height: 600px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.mapBox .worldMap {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0px;
+}
+.mapCenterBox {
+  z-index: 1;
+  width: 250px;
+  height: 250px;
+  position: relative;
+}
+.mapCenterBox .FClogo {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  z-index: 2;
+}
+.fMineImg {
+  position: absolute;
+  top: 0px;
+  top: 5px;
+  right: -233px;
+  width: 395px;
+}
+.mapBox .navInnerBox {
+  width: 100%;
+  position: absolute;
+  bottom: 0px;
+  justify-content: center;
+  margin: 20px 0;
+}
+.fContactBox {
+  width: 100%;
+  height: 60px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  border-top: 1px solid #d9d9d9;
+  border-bottom: 1px solid #d9d9d9;
+}
+.contactItemBox {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin: 0 10px;
+}
+.fLastBox {
+  width: 100%;
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.fLastBox p {
+  font-size: 16px !important;
+  font-weight: 600 !important;
+}
+.fLastBox span {
+  color: #bb0d19;
+}
