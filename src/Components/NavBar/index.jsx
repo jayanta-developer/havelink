@@ -6,10 +6,7 @@ import { Box, Typography } from '@mui/material';
 import Clogo from "../../Assets/Images/Clogo.png";
 
 
-
 //component
-
-
 
 
 export default function NavBar({ activeNav, setActiveNav }) {

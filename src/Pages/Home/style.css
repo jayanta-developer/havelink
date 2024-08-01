@@ -1,7 +1,7 @@
 .homeContainer {
   width: 100%;
   background: rgb(3, 22, 11);
-  height: 100vh;
+  height: 100%;
 }
 .heroSection {
   width: 100%;
@@ -11,7 +11,7 @@
   flex-direction: column;
   align-items: center;
   position: relative;
-  padding-top: 6%;
+  padding-top: 5%;
 }
 .heroSection p {
   z-index: 1;
@@ -39,9 +39,33 @@
   -webkit-text-fill-color: transparent;
 }
 .HeroBtn {
+  padding: 0 20px;
+  height: 58px;
+  border-radius: 38px;
+  background: rgb(0, 130, 222);
+  background: linear-gradient(
+    180deg,
+    rgba(0, 130, 222, 1) 0%,
+    rgba(88, 248, 140, 1) 80%
+  );
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  cursor: pointer;
+  transition: all 0.5s;
+  margin-top: 20px;
+  position: relative;
+}
+.HeroBtn:hover {
+  padding: 0 25px;
 }
 .HeroBtn p {
   font-size: 18px !important;
   font-weight: 700 !important;
   color: #fff;
+}
+.HeroBtn img {
+  position: absolute;
+  bottom: -348px;
 }

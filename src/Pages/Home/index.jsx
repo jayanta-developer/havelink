@@ -6,7 +6,8 @@ import { Box, Typography } from '@mui/material';
 import NavBar from '../../Components/NavBar';
 
 //images
-import brainImg from "../../Assets/Images/brainImg.png"
+import brainImg from "../../Assets/Images/brainImg.png";
+import HomeLine from "../../Assets/Images/Home_line.png"
 
 export default function Home({ activeNav, setActiveNav }) {
   return (
@@ -22,6 +23,7 @@ export default function Home({ activeNav, setActiveNav }) {
 
           <Box className="HeroBtn">
             <Typography>Get Your Personalized Solution !</Typography>
+            <img src={HomeLine} />
           </Box>
         </Box>
 
