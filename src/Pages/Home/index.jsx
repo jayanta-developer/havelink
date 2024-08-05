@@ -15,7 +15,27 @@ import bnfIcon1 from "../../Assets/Images/bnfIcon1.png";
 import bnfIcon2 from "../../Assets/Images/bnfIcon2.png";
 import bnfIcon3 from "../../Assets/Images/bnfIcon3.png";
 import bnfIcon4 from "../../Assets/Images/bnfIcon4.png";
-import benefitCard from "../../Assets/Images/benefitsCard.png"
+import benefitCard from "../../Assets/Images/benefitsCard.png";
+import testoMoniBg from "../../Assets/Images/textominiBg.png";
+import start from "../../Assets/Images/start.png";
+import cote from "../../Assets/Images/cote.png";
+import caseImg1 from "../../Assets/Images/caseImg1.png";
+import caseImg2 from "../../Assets/Images/caseImg2.png";
+import caseImg3 from "../../Assets/Images/caseimg3.png";
+import caseImg4 from "../../Assets/Images/caseImg4.png";
+import Avatar from "../../Assets/Images/avatar.png"
+import calenderIcon from "../../Assets/Images/calenderIcon.png"
+import DGArrow from "../../Assets/Images/DGarrow.png"
+
+
+
+
+
+
+
+
+
+
 
 export default function Home({ activeNav, setActiveNav }) {
 
@@ -28,6 +48,35 @@ export default function Home({ activeNav, setActiveNav }) {
         </Box>
         <Typography>{title}</Typography>
         <span>{summery}</span>
+      </Box>
+    )
+  }
+
+  const CaseCard = ({ BgImg }) => {
+    return (
+      <Box className="caseCard">
+        <img src={BgImg} className='caseCardBg' />
+        <Box className="gradiantBox">
+          <Box className="CSUInfoBox">
+            <Box className="CSUserInfoBox">
+              <Box className="Avatar">
+                <img src={Avatar} />
+              </Box>
+              <Typography>Jenny kiaa</Typography>
+            </Box>
+            <Box className="CSDateBox">
+              <img src={calenderIcon} />
+              <Typography>02 April 2022</Typography>
+            </Box>
+          </Box>
+
+          <samp>Grad your spot fast before all the seats fill up.</samp>
+          <span>Grad your spot fast before all the seats fill up, don’t miss it.....</span>
+          <Box className="readMoretab">
+            <Typography>Read More</Typography>
+            <img src={DGArrow} />
+          </Box>
+        </Box>
       </Box>
     )
   }
@@ -87,17 +136,51 @@ export default function Home({ activeNav, setActiveNav }) {
           <Typography className='nSummeryText'>Videtics propose une suite logicielle qui facilite la surveillance des zones protégées, l'investigation à postériori et la prise de décision en utilisant les caméras IP existantes de votre parc vidéo.</Typography>
 
           <Box className="benefitCardBox">
-
             {BenefitCard({ icon: bnfIcon1, title: "Customizable AI Models", summery: "Our Gen AI tool can be customized to align with your industry-specific requirements, ensuring it delivers maximum value and efficiency" })}
             {BenefitCard({ icon: bnfIcon2, title: "Advanced Predictive Analytics", summery: "Leverage our AI's powerful predictive capabilities to anticipate market trends, optimize operations, and drive strategic decisions." })}
             {BenefitCard({ icon: bnfIcon3, title: "Expertise in AI Customization", summery: "Our team of AI experts specializes in creating customized solutions that align perfectly with your specific needs and goals." })}
             {BenefitCard({ icon: bnfIcon4, title: "Commitment to Security", summery: "We prioritize the security and privacy of your data, ensuring that our solutions comply with the highest standards and regulatory requirements." })}
+          </Box>
+        </Box>
 
+        {/*Client testimonials  */}
+        <Box className="testimonialSection">
+          <Typography className='sectionHeader'>Client Testimonials</Typography>
+          <Box className="testMonBox">
+            <img src={testoMoniBg} className='testomoniBgImg' />
+            <Box className="titleBox">
+              <Typography className='titleText'>Jhon Doe</Typography>
+              <Typography className='testMonNtext'>Videtics propose une suite logicielle.</Typography>
+              <Box className="testMonGline"></Box>
+              <img src={cote} className='coteImg' />
+            </Box>
 
+            <Box className="starBottomBox">
+              <Box className="starBox">
+                <img src={start} />
+                <img src={start} />
+                <img src={start} />
+                <img src={start} />
+                <img src={start} />
+              </Box>
+              <Typography className='testMonNtext'>Kheops offre des fonctionnalités de co-édition en temps réel permettantà plusieurs utilisateurs de contribuer simultanément à la création decontenus assistés par l’I.A.Idéal pour le partage d’idées et la collaboration hybride, humain/I.A,avec la fonctionnalité « demande à mes données » qui permetl’interaction avec la base de connaissance de l’entreprise via l’I.A.</Typography>
+            </Box>
+          </Box>
+        </Box>
 
+        {/* case studies */}
+
+        <Box className="caseSection">
+          <Typography className='sectionHeader'>Case studies</Typography>
+          <Box className="caseCardBox">
+            {CaseCard({ BgImg: caseImg1 })}
+            {CaseCard({ BgImg: caseImg2 })}
+            {CaseCard({ BgImg: caseImg3 })}
+            {CaseCard({ BgImg: caseImg4 })}
           </Box>
 
         </Box>
+
 
 
       </Box>
