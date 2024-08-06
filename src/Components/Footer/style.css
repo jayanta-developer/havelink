@@ -1,6 +1,78 @@
 .footer {
   width: 100%;
-  border: 1px solid red;
   display: flex;
   flex-direction: column;
+  backdrop-filter: blur(3px);
+  padding-top: 50px;
+  background-color: #01111a4f;
+}
+.footerBottomBox {
+  width: 100%;
+  height: 70px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  border-top: 1px solid #ffffff41;
+}
+.footerNText {
+  font-size: 16px !important;
+  color: #fff;
+  cursor: pointer;
+}
+.footerBottomBox span {
+  margin: 0 20px;
+}
+.footerBottom1Box {
+  width: 100%;
+  height: 70px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 60px;
+  margin-top: 40px;
+}
+.footerMainBox {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 50px;
+}
+.footerItemBox {
+  width: 23%;
+  display: flex;
+  flex-direction: column;
+}
+.SmideaIconBox {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+}
+.SmideaIconBox img {
+  cursor: pointer;
+}
+.footerItemBox .Fclogo {
+  width: 50%;
+}
+.subscribeBox {
+  width: 27%;
+  border-radius: 14px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  justify-content: center;
+  gap: 40px;
+  background-color: #2551da0a;
+  border: 1px solid #ffffff41;
+}
+.subscribeBox .subHeader {
+  font-size: 30px !important;
+  font-weight: 700 !important;
+  font-family: "Archivo";
+  color: #fff;
+  text-align: center;
 }

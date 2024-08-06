@@ -4,6 +4,7 @@ import "./style.css";
 //components
 import { Box, Typography } from '@mui/material';
 import NavBar from '../../Components/NavBar';
+import Footer from '../../Components/Footer';
 
 //images
 import brainImg from "../../Assets/Images/brainImg.png";
@@ -241,7 +242,7 @@ export default function Home({ activeNav, setActiveNav }) {
         </Box>
 
 
-
+        <Footer />
       </Box>
     </>
   )
