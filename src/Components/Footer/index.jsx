@@ -5,16 +5,16 @@ import "./style.css"
 import { Box, Typography } from '@mui/material';
 
 //images
-import Clogo from "../../Assets/Images/Clogo.png"
+import Clogo from "../../Assets/Images/Clogo.png";
 import footerClog1 from "../../Assets/Images/footerColo1.png";
 import footerClog2 from "../../Assets/Images/footerColo2.png";
 import footerClog3 from "../../Assets/Images/footerColo3.png";
 import footerClog4 from "../../Assets/Images/footerColo4.png";
-import facebookIcon from "../../Assets/Images/facebook-logo.png"
-import TwitterIcon from "../../Assets/Images/twitter.png"
-import LinkdinIcon from "../../Assets/Images/linkdin.png"
-import InstaIcon from "../../Assets/Images/instaIcon.png"
-import G_mailIcom from "../../Assets/Images/G_mailIcon.png"
+import facebookIcon from "../../Assets/Images/facebook-logo.png";
+import TwitterIcon from "../../Assets/Images/twitter.png";
+import LinkdinIcon from "../../Assets/Images/linkdin.png";
+import InstaIcon from "../../Assets/Images/instaIcon.png";
+import G_mailIcom from "../../Assets/Images/G_mailIcon.png";
 
 export default function Footer() {
   return (
@@ -23,7 +23,11 @@ export default function Footer() {
         <Box className="footerMainBox">
           <Box className="footerItemBox">
             <img src={Clogo} className='Fclogo' />
-            <Typography my={3} className='footerNText'>Videtics propose une suite logicielle qui facilite la surveillance des zones protégées, l'investigation à postériori et la prise de décision.</Typography>
+            <Typography my={3} className='footerNText'>
+              Videtics propose une suite logicielle qui facilite la
+              surveillance des zones protégées, l'investigation à
+              postériori et la prise de décision.
+            </Typography>
             <Box className="SmideaIconBox">
               <img src={facebookIcon} />
               <img src={TwitterIcon} />
@@ -41,16 +45,14 @@ export default function Footer() {
           <Box className="footerItemBox subscribeBox">
             <Typography className='subHeader'>SUBSCRIBE TO OUR NEWS LETTER :</Typography>
 
-            <Box >
+            <Box>
               <Box className="inputBox">
                 <input type="text" placeholder='Mail' />
-                <img src={G_mailIcom} />
+                <img width={"13px"} src={G_mailIcom} />
               </Box>
-
               <Box className="HeroBtn">
                 <Typography>SUBSCRIBE</Typography>
               </Box>
-
             </Box>
 
           </Box>

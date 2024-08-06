@@ -5,6 +5,7 @@ import "./style.css";
 import { Box, Typography } from '@mui/material';
 import NavBar from '../../Components/NavBar';
 import Footer from '../../Components/Footer';
+import { BenefitCard } from "../../Components/Util"
 
 //images
 import brainImg from "../../Assets/Images/brainImg.png";
@@ -16,7 +17,6 @@ import bnfIcon1 from "../../Assets/Images/bnfIcon1.png";
 import bnfIcon2 from "../../Assets/Images/bnfIcon2.png";
 import bnfIcon3 from "../../Assets/Images/bnfIcon3.png";
 import bnfIcon4 from "../../Assets/Images/bnfIcon4.png";
-import benefitCard from "../../Assets/Images/benefitsCard.png";
 import testoMoniBg from "../../Assets/Images/textominiBg.png";
 import start from "../../Assets/Images/start.png";
 import cote from "../../Assets/Images/cote.png";
@@ -34,19 +34,7 @@ import mailIcom from "../../Assets/Images/mailIcon.png";
 
 
 export default function Home({ activeNav, setActiveNav }) {
-
-  const BenefitCard = ({ icon, title, summery }) => {
-    return (
-      <Box className="benefitCard">
-        <img src={benefitCard} className='bnfBg' />
-        <Box className="bnfCardLogoBox">
-          <img src={icon} />
-        </Box>
-        <Typography>{title}</Typography>
-        <span>{summery}</span>
-      </Box>
-    )
-  }
+  setActiveNav(0)
 
   const CaseCard = ({ BgImg }) => {
     return (
@@ -234,14 +222,9 @@ export default function Home({ activeNav, setActiveNav }) {
             <Box className="HeroBtn">
               <Typography>Submit now</Typography>
             </Box>
-
-
-
           </Box>
 
         </Box>
-
-
         <Footer />
       </Box>
     </>
