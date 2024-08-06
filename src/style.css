@@ -20,7 +20,9 @@
   user-select: none;
   font-family: "creato_display" !important;
 }
-
+body {
+  background-color: unset;
+}
 .pointer {
   cursor: pointer;
 }
@@ -58,4 +60,11 @@
 ::-moz-scrollbar-track {
   background-color: #f1f1f1;
   /* Color of the scrollbar track */
+}
+html {
+  height: 100%;
+  background: url("https://wallpaperlayer.com/img/2015/6/gaussian-blur-wallpaper-3220-3424-hd-wallpapers.jpg")
+    no-repeat center center fixed;
+  background-size: cover;
+  background-color: rgb(3, 22, 11);
 }

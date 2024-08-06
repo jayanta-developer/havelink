@@ -27,22 +27,59 @@
   font-size: 18px !important;
   font-weight: 700 !important;
   color: #fff;
+  z-index: 1;
 }
 .navItem {
   cursor: pointer;
   transition: all 0.5s;
 }
 .navItemActive {
+  position: relative;
   height: 34px;
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 0 20px;
-  background: rgb(0, 130, 222);
+  background: none;
+  border-radius: 38px;
+  overflow: hidden; /* Ensure that pseudo-elements don't overflow */
+  cursor: pointer;
+}
+
+.navItemActive::before,
+.navItemActive::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border-radius: 38px; /* Same as the button */
+  transition: opacity 0.8s;
+}
+
+.navItemActive::before {
   background: linear-gradient(
     180deg,
     rgba(0, 130, 222, 1) 0%,
     rgba(88, 248, 140, 1) 80%
   );
-  border-radius: 38px;
+  opacity: 1;
+}
+
+.navItemActive::after {
+  background: linear-gradient(
+    180deg,
+    rgba(88, 248, 140, 1) 0%,
+    rgba(0, 130, 222, 1) 80%
+  );
+  opacity: 0;
+}
+
+.navItemActive:hover::before {
+  opacity: 0;
+}
+
+.navItemActive:hover::after {
+  opacity: 1;
 }

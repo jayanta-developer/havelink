@@ -25,17 +25,10 @@ import caseImg3 from "../../Assets/Images/caseimg3.png";
 import caseImg4 from "../../Assets/Images/caseImg4.png";
 import Avatar from "../../Assets/Images/avatar.png"
 import calenderIcon from "../../Assets/Images/calenderIcon.png"
-import DGArrow from "../../Assets/Images/DGarrow.png"
+import DGArrow from "../../Assets/Images/DGarrow.png";
 import userIcon from "../../Assets/Images/userIcon.png";
 import textIcon from "../../Assets/Images/textIcon.png";
-import mailIcom from "../../Assets/Images/mailIcon.png"
-
-
-
-
-
-
-
+import mailIcom from "../../Assets/Images/mailIcon.png";
 
 
 
@@ -71,7 +64,6 @@ export default function Home({ activeNav, setActiveNav }) {
               <Typography>02 April 2022</Typography>
             </Box>
           </Box>
-
           <samp>Grad your spot fast before all the seats fill up.</samp>
           <span>Grad your spot fast before all the seats fill up, don’t miss it.....</span>
           <Box className="readMoretab">
@@ -238,7 +230,9 @@ export default function Home({ activeNav, setActiveNav }) {
               </Box>
             </Box>
 
-
+            <Box className="HeroBtn">
+              <Typography>Submit now</Typography>
+            </Box>
 
 
 

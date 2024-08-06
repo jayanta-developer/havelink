@@ -1,6 +1,6 @@
 .homeContainer {
   width: 100%;
-  background: rgb(3, 22, 11);
+  /* background: rgb(3, 22, 11); */
   height: 100%;
 }
 .heroSection {
@@ -38,7 +38,7 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-.HeroBtn {
+/* .HeroBtn {
   min-width: 294px;
   padding: 0 20px;
   height: 58px;
@@ -59,11 +59,72 @@
 }
 .HeroBtn:hover {
   padding: 0 25px;
+  background: rgba(88, 248, 140, 1);
+  background: linear-gradient(
+    180deg,
+    rgba(88, 248, 140, 1) 0%,
+    rgba(0, 130, 222, 1) 80%
+  );
+} */
+
+.HeroBtn {
+  position: relative;
+  min-width: 294px;
+  padding: 0 20px;
+  height: 58px;
+  border-radius: 38px;
+  background: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  cursor: pointer;
+  transition: all 0.5s;
+  margin-top: 20px;
+  overflow: hidden;
 }
+.HeroBtn::before,
+.HeroBtn::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border-radius: 38px; /* Same as the button */
+  transition: opacity 0.8s;
+}
+.HeroBtn::before {
+  background: linear-gradient(
+    180deg,
+    rgba(0, 130, 222, 1) 0%,
+    rgba(88, 248, 140, 1) 80%
+  );
+  opacity: 1;
+}
+
+.HeroBtn::after {
+  background: linear-gradient(
+    180deg,
+    rgba(88, 248, 140, 1) 0%,
+    rgba(0, 130, 222, 1) 80%
+  );
+  opacity: 0;
+}
+
+.HeroBtn:hover::before {
+  opacity: 0;
+}
+
+.HeroBtn:hover::after {
+  opacity: 1;
+}
+
 .HeroBtn p {
   font-size: 18px !important;
   font-weight: 700 !important;
   color: #fff;
+  z-index: 1;
 }
 
 .HomelineBox {
@@ -425,6 +486,7 @@
   display: flex;
   flex-direction: column;
   gap: 20px;
+  align-items: center;
 }
 .inputWl {
   width: 100%;
@@ -493,4 +555,7 @@
 .contactTextBox .sectionHeader {
   text-align: start;
   font-size: 58px !important;
+}
+.contactInputBox .HeroBtn {
+  width: 180px;
 }
