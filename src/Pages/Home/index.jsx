@@ -26,7 +26,9 @@ import caseImg4 from "../../Assets/Images/caseImg4.png";
 import Avatar from "../../Assets/Images/avatar.png"
 import calenderIcon from "../../Assets/Images/calenderIcon.png"
 import DGArrow from "../../Assets/Images/DGarrow.png"
-
+import userIcon from "../../Assets/Images/userIcon.png";
+import textIcon from "../../Assets/Images/textIcon.png";
+import mailIcom from "../../Assets/Images/mailIcon.png"
 
 
 
@@ -177,6 +179,69 @@ export default function Home({ activeNav, setActiveNav }) {
             {CaseCard({ BgImg: caseImg2 })}
             {CaseCard({ BgImg: caseImg3 })}
             {CaseCard({ BgImg: caseImg4 })}
+          </Box>
+        </Box>
+
+        {/* contact section */}
+        <Box className="contacSection">
+
+          <Box className="contactTextBox">
+            <Typography className='sectionHeader'>Contact Us for a Free Consultation</Typography>
+            <span>
+              Videtics propose une suite logicielle qui facilite la surveillance des zones protégées,
+              l'investigation à postériori et la prise de décision en utilisant les caméras IP
+              existantes de votre parc vidéo.
+            </span>
+          </Box>
+
+          <Box className="contactInputBox">
+
+            <Box className="inputFBox">
+              <Box className="inputWl">
+                <Typography>First Name</Typography>
+                <Box className="inputBox">
+                  <input type="text" placeholder='First Name' />
+                  <img src={userIcon} />
+                </Box>
+              </Box>
+
+              <Box className="inputWl">
+                <Typography>Last Name</Typography>
+                <Box className="inputBox">
+                  <input type="text" placeholder='Last Name' />
+                  <img src={userIcon} />
+                </Box>
+              </Box>
+
+            </Box>
+
+            <Box className="inputWl">
+              <Typography>Company</Typography>
+              <Box className="inputBox">
+                <input type="text" placeholder='Company' />
+                <img src={textIcon} />
+              </Box>
+            </Box>
+
+            <Box className="inputWl">
+              <Typography>Email</Typography>
+              <Box className="inputBox">
+                <input type="text" placeholder='Mail' />
+                <img src={mailIcom} />
+              </Box>
+            </Box>
+
+            <Box className="inputWl messageBox">
+              <Typography>Message</Typography>
+              <Box className="inputBox">
+                <textarea />
+              </Box>
+            </Box>
+
+
+
+
+
           </Box>
 
         </Box>
