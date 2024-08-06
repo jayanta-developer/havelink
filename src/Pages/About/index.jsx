@@ -24,7 +24,6 @@ export default function About({ activeNav, setActiveNav }) {
         <NavBar activeNav={activeNav} setActiveNav={setActiveNav} />
 
 
-
         {/* benefits section */}
         <Box className="benefitSection">
           <Typography className='sectionHeader'>Values</Typography>
