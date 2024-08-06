@@ -38,34 +38,6 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-/* .HeroBtn {
-  min-width: 294px;
-  padding: 0 20px;
-  height: 58px;
-  border-radius: 38px;
-  background: rgb(0, 130, 222);
-  background: linear-gradient(
-    180deg,
-    rgba(0, 130, 222, 1) 0%,
-    rgba(88, 248, 140, 1) 80%
-  );
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 1;
-  cursor: pointer;
-  transition: all 0.5s;
-  margin-top: 20px;
-}
-.HeroBtn:hover {
-  padding: 0 25px;
-  background: rgba(88, 248, 140, 1);
-  background: linear-gradient(
-    180deg,
-    rgba(88, 248, 140, 1) 0%,
-    rgba(0, 130, 222, 1) 80%
-  );
-} */
 
 .HeroBtn {
   position: relative;
@@ -170,6 +142,8 @@
   gap: 60px;
   padding: 0 46px;
   position: relative;
+  backdrop-filter: blur(8px);
+  background-color: #2551da0a;
 }
 .aiCardHeader {
   font-family: "Archivo" !important;
@@ -244,11 +218,13 @@
   font-weight: 600 !important;
   color: #fff;
   text-align: center;
+  z-index: 1;
 }
 .benefitCard span {
   font-size: 17px !important;
   color: #ffffffde;
   text-align: center;
+  z-index: 1;
 }
 .bnfCardLogoBox {
   width: 40%;
@@ -269,6 +245,7 @@
   top: 0px;
   width: 100%;
   height: 100%;
+  backdrop-filter: blur(3px);
 }
 .testimonialSection {
   width: 100%;
@@ -487,6 +464,7 @@
   flex-direction: column;
   gap: 20px;
   align-items: center;
+  backdrop-filter: blur(8px);
 }
 .inputWl {
   width: 100%;
