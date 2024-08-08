@@ -1,3 +1,186 @@
 .aboutPage {
   width: 100%;
 }
+.whoWeareSection {
+  width: 100%;
+  height: 83vh;
+  position: relative;
+  padding-left: 13%;
+  padding-top: 4%;
+}
+.aboutFBg {
+  width: 100%;
+  height: 100%;
+}
+.whoWeareSection .nSummeryText2 {
+  font-size: 18px !important;
+  color: #fff;
+}
+.whoWeareSection .aboutNText {
+  width: 70%;
+}
+.whoWeareSection .sectionHeader {
+  text-align: start;
+}
+.aboutNText {
+  width: 70%;
+  font-size: 16px !important;
+  color: #ffffffc4;
+}
+.ourStorySection {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.ourStorySection .aboutNText {
+  text-align: center;
+}
+.behindTeamSection {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 70px;
+}
+.behindTeamSection .aiCardHeader {
+  width: 40%;
+  text-align: center;
+}
+.teamCardBox {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 50px;
+}
+.teamCard {
+  width: 22%;
+  max-width: 300px;
+  height: 500px;
+  background: rgb(21, 94, 124);
+  background: linear-gradient(
+    180deg,
+    rgba(21, 94, 124, 1) 0%,
+    rgba(0, 0, 0, 1) 80%
+  );
+  border-radius: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+.teamCard .teamBg {
+  position: absolute;
+  width: 90%;
+  height: 83%;
+  bottom: 0px;
+  z-index: 1;
+}
+.TeamCardFBox {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  display: flex;
+  justify-content: end;
+  flex-direction: column;
+  z-index: 1;
+  background: linear-gradient(
+    180deg,
+    rgba(2, 24, 33, 0) 32.62%,
+    #021821 87.89%
+  );
+  transition: all 0.8s ease-out;
+}
+.tcfbHeader {
+  font-size: 26px !important;
+  font-weight: 700 !important;
+  color: #fff;
+  font-family: "Archivo" !important;
+}
+.tcfbSubHeader {
+  font-size: 18px !important;
+  color: #fff;
+}
+.socialMBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+.socialMBox img {
+  width: 18px;
+  cursor: pointer;
+}
+.socialMBox .fIcon {
+  width: 28px;
+}
+.TeamCardSBox {
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  position: absolute;
+  background: linear-gradient(
+    180.26deg,
+    rgba(21, 94, 124, 0.9) -0.56%,
+    rgba(21, 94, 124, 0.9) 99.77%
+  );
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 12px;
+  transition: all 0.8s ease-out;
+  translate: -100%;
+}
+.TeamCardSBox .socialMBox {
+  flex-direction: row;
+  position: relative;
+  justify-content: start;
+  top: unset;
+  right: unset;
+}
+.teamCard:hover .TeamCardFBox {
+  translate: 100%;
+}
+.teamCard:hover .TeamCardSBox {
+  translate: 0%;
+}
+.partnerSection {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 70px 0;
+}
+.partnerCardBox {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+  margin-top: 50px;
+}
+.partnerCard {
+  width: 22%;
+  height: 160px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(0, 175, 157, 0.38);
+  border-radius: 16px;
+  padding: 20px;
+}
