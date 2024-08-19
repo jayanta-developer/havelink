@@ -10,6 +10,7 @@ import { BenefitCard } from "../../Components/Util"
 //images
 import brainImg from "../../Assets/Images/brainImg.png";
 import HomeLine from "../../Assets/Images/Home_line.png";
+import homeLineCenter from "../../Assets/Images/Home_line_center.png"
 import AiCardImg from "../../Assets/Images/aiCardImg.png";
 import rightBtn from "../../Assets/Images/right (1) 2.png"
 import leftBtn from "../../Assets/Images/left (1) 1.png";
@@ -30,7 +31,8 @@ import DGArrow from "../../Assets/Images/DGarrow.png";
 import userIcon from "../../Assets/Images/userIcon.png";
 import textIcon from "../../Assets/Images/textIcon.png";
 import mailIcom from "../../Assets/Images/mailIcon.png";
-
+import sideLine from "../../Assets/Images/sideLine.png"
+import earthInHand from "../../Assets/Images/earthInHandeImg.png";
 
 
 export default function Home({ activeNav, setActiveNav }) {
@@ -108,7 +110,10 @@ export default function Home({ activeNav, setActiveNav }) {
             </Box>
 
           </Box>
-          <img src={HomeLine} className='homeLineImg' />
+          <img src={homeLineCenter} className='homeLineCenterImg' />
+          <img src={sideLine} className='leftSideLine' />
+          <img src={sideLine} className='rightSideLine' />
+
 
         </Box>
 
@@ -124,6 +129,10 @@ export default function Home({ activeNav, setActiveNav }) {
             {BenefitCard({ icon: bnfIcon3, title: "Expertise in AI Customization", summery: "Our team of AI experts specializes in creating customized solutions that align perfectly with your specific needs and goals." })}
             {BenefitCard({ icon: bnfIcon4, title: "Commitment to Security", summery: "We prioritize the security and privacy of your data, ensuring that our solutions comply with the highest standards and regulatory requirements." })}
           </Box>
+          <img src={sideLine} className='leftSideLine' />
+          <img src={earthInHand} className='earthInHand' />
+          <img src={sideLine} className='rightSideLine' />
+
         </Box>
 
         {/*Client testimonials  */}
@@ -149,6 +158,8 @@ export default function Home({ activeNav, setActiveNav }) {
               <Typography className='testMonNtext'>Kheops offre des fonctionnalités de co-édition en temps réel permettantà plusieurs utilisateurs de contribuer simultanément à la création decontenus assistés par l’I.A.Idéal pour le partage d’idées et la collaboration hybride, humain/I.A,avec la fonctionnalité « demande à mes données » qui permetl’interaction avec la base de connaissance de l’entreprise via l’I.A.</Typography>
             </Box>
           </Box>
+          <img src={sideLine} className='rightSideLine' />
+
         </Box>
 
         {/* case studies */}
@@ -223,6 +234,7 @@ export default function Home({ activeNav, setActiveNav }) {
               <Typography>Submit now</Typography>
             </Box>
           </Box>
+          <img src={sideLine} className='leftSideLine' />
 
         </Box>
         <Footer />

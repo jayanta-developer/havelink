@@ -32,7 +32,6 @@ import partnerImg8 from "../../Assets/Images/partnerImg8.png";
 
 
 
-
 export default function About({ activeNav, setActiveNav }) {
   setActiveNav(2)
 
