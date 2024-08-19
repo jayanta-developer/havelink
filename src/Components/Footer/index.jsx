@@ -45,7 +45,7 @@ export default function Footer() {
           <Box className="footerItemBox subscribeBox">
             <Typography className='subHeader'>SUBSCRIBE TO OUR NEWS LETTER :</Typography>
 
-            <Box>
+            <Box className="subInnerBox">
               <Box className="inputBox">
                 <input type="text" placeholder='Mail' />
                 <img width={"13px"} src={G_mailIcom} />

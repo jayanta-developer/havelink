@@ -16,12 +16,12 @@
   cursor: pointer;
 }
 .NavItemsBox {
-  width: 70%;
+  width: 80%;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  gap: 65px;
+  gap: 30px;
 }
 .navItem p {
   font-size: 18px !important;
@@ -82,4 +82,16 @@
 
 .navItemActive:hover::after {
   opacity: 1;
+}
+
+/* Tabe view */
+@media only screen and (min-width: 768px) {
+}
+
+/* Desktop view */
+@media only screen and (min-width: 1000px) {
+  .NavItemsBox {
+    width: 70%;
+    gap: 65px;
+  }
 }
