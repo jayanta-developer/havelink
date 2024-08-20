@@ -26,7 +26,7 @@
 }
 .footerBottom1Box {
   width: 100%;
-  height: 70px;
+  /* height: 70px; */
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -37,7 +37,7 @@
   padding: 0 20px;
 }
 .footerBottom1Box img {
-  width: 100px;
+  width: 12%;
 }
 .footerMainBox {
   width: 100%;
@@ -114,6 +114,9 @@
   }
   .footerNText {
     text-align: start;
+  }
+  .footerBottom1Box img {
+    width: unset;
   }
 }
 
