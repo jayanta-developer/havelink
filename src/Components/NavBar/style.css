@@ -18,6 +18,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  padding-top: 10px;
 }
 .cLogoBox img {
   width: 55px;
@@ -117,6 +118,9 @@
 }
 /* Tabe view */
 @media only screen and (min-width: 768px) {
+  .cLogoBox {
+    padding-top: 0;
+  }
   .NavItemsBox {
     display: flex;
   }
