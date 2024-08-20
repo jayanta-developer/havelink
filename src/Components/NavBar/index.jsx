@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import "./style.css"
 import { useNavigate } from "react-router-dom";
 
@@ -15,6 +15,23 @@ import backIcon from "../../Assets/Images/backIcon.png";
 export default function NavBar({ activeNav, setActiveNav }) {
   const navigate = useNavigate();
   const [sideMenu, setSideMenu] = useState(false);
+  const [menuVisibility, setMenuVisibility] = useState(true)
+
+
+  useEffect(() => {
+    if (sideMenu) {
+      document.body.style.overflow = 'hidden';
+      setTimeout(() => {
+        setMenuVisibility(true)
+      }, 200)
+    } else {
+      document.body.style.overflow = '';
+      setTimeout(() => {
+        setMenuVisibility(false)
+      }, 300)
+    }
+  }, [sideMenu])
+
 
   return (
     <>
@@ -24,12 +41,13 @@ export default function NavBar({ activeNav, setActiveNav }) {
 
 
         {/* side menu icon */}
-        <Box className="sideMenu" sx={{ width: sideMenu ? "100%" : "0px" }}>
+        <Box className={menuVisibility ? "sideMenu" : "sideMenu subItemDeactivate"} sx={{ width: sideMenu ? "100%" : "0px" }}>
           <img src={backIcon} className='backIcon' onClick={() => setSideMenu(false)} />
 
           <Box className={activeNav === 0 ? "navItem navItemActive" : "navItem"} onClick={() => {
             setActiveNav(0)
             navigate("/")
+            setSideMenu(false)
           }}>
             <Typography>Home</Typography>
           </Box>
@@ -37,9 +55,9 @@ export default function NavBar({ activeNav, setActiveNav }) {
             <Typography>Solutions</Typography>
           </Box>
           <Box className={activeNav === 2 ? "navItem navItemActive" : "navItem"} onClick={() => {
+            setSideMenu(false)
             setActiveNav(2)
             navigate("/about")
-
           }}>
             <Typography>About Us</Typography>
           </Box>
