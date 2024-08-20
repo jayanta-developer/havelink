@@ -500,7 +500,7 @@
   margin-bottom: 60px;
 }
 .contacSection .leftSideLine {
-  top: 130px;
+  top: 114px;
 }
 .contacSection .sectionHeader {
   text-align: center !important;
@@ -681,6 +681,9 @@
   .starBox {
     padding: 0;
   }
+  .contacSection .leftSideLine {
+    top: 130px;
+  }
 }
 
 /* Desktop view */
@@ -733,7 +736,7 @@
     width: 40%;
   }
   .contacSection .leftSideLine {
-    top: 282px;
+    top: 380px;
   }
   .heroHeader1 {
     font-size: 30px !important;
