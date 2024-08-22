@@ -6,6 +6,11 @@ import { Box, Typography } from '@mui/material';
 import NavBar from '../../Components/NavBar';
 import Footer from '../../Components/Footer';
 import { BenefitCard } from "../../Components/Util";
+// import YoutubePlayer from '../../Components/VideoPlayer';
+
+import ReactPlayer from 'react-player'
+
+
 
 //images
 import bnfIcon1 from "../../Assets/Images/bnfIcon1.png";
@@ -29,6 +34,14 @@ import partnerImg5 from "../../Assets/Images/partnerImg5.png";
 import partnerImg6 from "../../Assets/Images/partnerImg6.png";
 import partnerImg7 from "../../Assets/Images/partnerImg7.png";
 import partnerImg8 from "../../Assets/Images/partnerImg8.png";
+import earthInHand from "../../Assets/Images/earthInHandeImg.png";
+import chainImg from "../../Assets/Images/chanImg.png"
+import handShakImgBg from "../../Assets/Images/professional-handshake-with-digital-network-overlay-abstract-wallpaper-background 1.png"
+import valueBg from "../../Assets/Images/valueBg.png"
+import partnarsBg from "../../Assets/Images/partnersBg.png"
+import MeetBg from "../../Assets/Images/meetBg.png"
+
+
 
 
 
@@ -80,18 +93,20 @@ export default function About({ activeNav, setActiveNav }) {
   return (
     <>
       <Box className="aboutPage">
+        <img src={pageBg1} className='aboutFBg' />
         <NavBar activeNav={activeNav} setActiveNav={setActiveNav} />
 
         <Box className='whoWeareSection'>
-          {/* <img src={pageBg1} className='aboutFBg' /> */}
-          <Typography className='sectionHeader'>Who We Are</Typography>
+          <Typography className='sectionHeader'>WHO WE ARE</Typography>
           <Typography className='nSummeryText2'>Unleash Your Productivity Creativity Potential Business</Typography>
           <Typography my={4} className='aboutNText'>UThere are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. </Typography>
           <Typography className='aboutNText'>It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.</Typography>
         </Box>
 
         <Box className="ourStorySection">
-          <Typography className='sectionHeader'>Our Story</Typography>
+          <img src={MeetBg} className='StoryBg' />
+
+          <Typography className='sectionHeader'>OUR STORY</Typography>
           <Typography my={3} className='aboutNText'>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. </Typography>
           <Typography className='aboutNText'>It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.</Typography>
         </Box>
@@ -99,7 +114,7 @@ export default function About({ activeNav, setActiveNav }) {
 
         {/* behind Team Section */}
         <Box className="behindTeamSection">
-          <Typography className='sectionHeader'>Meet the Team Behind Havelink</Typography>
+          <Typography className='sectionHeader'>MEET THE TEAM BEHIND HAVELINK</Typography>
           <Box className="teamCardBox">
             {TeamCard({ title: "JUSTIN STIVEN", sub1: "It uses a dictionary of over 200 Latin words", sub2: "It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures", sub3: "combined with a handful of model sentence structures", img: teamImg1 })}
             {TeamCard({ title: "JUSTIN STIVEN", sub1: "It uses a dictionary of over 200 Latin words", sub2: "It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures", sub3: "combined with a handful of model sentence structures", img: teamImg2 })}
@@ -110,7 +125,8 @@ export default function About({ activeNav, setActiveNav }) {
 
         {/* Partners */}
         <Box className="partnerSection">
-          <Typography className='sectionHeader'>Partners</Typography>
+          <img src={partnarsBg} className='partnarsBg' />
+          <Typography className='sectionHeader'>PARTNERS</Typography>
           <Box className="partnerCardBox">
             {
               partnerImg?.map((el, i) => (
@@ -119,18 +135,13 @@ export default function About({ activeNav, setActiveNav }) {
                 </Box>
               ))
             }
-
-
-
           </Box>
-
-
         </Box>
-
 
         {/* benefits section */}
         <Box mb={5} className="benefitSection">
-          <Typography className='sectionHeader'>Values</Typography>
+          <img src={valueBg} className='valueBg' />
+          <Typography className='sectionHeader'>VALUES</Typography>
           <Box className="benefitCardBox">
             {BenefitCard({ icon: bnfIcon1, title: "Customizable AI Models", summery: "Our Gen AI tool can be customized to align with your industry-specific requirements, ensuring it delivers maximum value and efficiency" })}
             {BenefitCard({ icon: bnfIcon2, title: "Advanced Predictive Analytics", summery: "Leverage our AI's powerful predictive capabilities to anticipate market trends, optimize operations, and drive strategic decisions." })}
@@ -139,6 +150,17 @@ export default function About({ activeNav, setActiveNav }) {
           </Box>
         </Box>
 
+        {/* video section */}
+
+        <Box className="AboutVideoSection">
+          <Typography className='sectionHeader'>SEE OUT VIDEO</Typography>
+          <Box className="videoBox">
+            <ReactPlayer url='https://www.youtube.com/watch?v=63yr9dlI0cU' loop />
+          </Box>
+          <img src={earthInHand} className='earthInHandImg' />
+          <img src={chainImg} className='chainImg' />
+          <img src={handShakImgBg} className='handShakImgBg' />
+        </Box>
         <Footer />
       </Box>
     </>

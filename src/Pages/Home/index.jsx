@@ -33,6 +33,12 @@ import textIcon from "../../Assets/Images/textIcon.png";
 import mailIcom from "../../Assets/Images/mailIcon.png";
 import sideLine from "../../Assets/Images/sideLine.png"
 import earthInHand from "../../Assets/Images/earthInHandeImg.png";
+import valueBg from "../../Assets/Images/valueBg.png"
+import aisoliotionBg from "../../Assets/Images/aiSolutaionBg.png";
+import benefitBg from "../../Assets/Images/benefitBg.png";
+import testimoni from "../../Assets/Images/testimoBg.png";
+import studiesBg from "../../Assets/Images/studiesBg.png"
+import contactBg from "../../Assets/Images/contactBg.png"
 
 
 export default function Home({ activeNav, setActiveNav }) {
@@ -89,6 +95,7 @@ export default function Home({ activeNav, setActiveNav }) {
         {/*ai section  */}
 
         <Box className="aiSection">
+          <img src={aisoliotionBg} className='aisoliotionBg' />
           <Typography className='sectionHeader'>AI Solutions</Typography>
           <Typography className='nSummeryText'>Videtics propose une suite logicielle qui facilite la surveillance des zones protégées, l'investigation à postériori et la prise de décision en utilisant les caméras IP existantes de votre parc vidéo.</Typography>
 
@@ -120,6 +127,7 @@ export default function Home({ activeNav, setActiveNav }) {
 
         {/* benefits section */}
         <Box className="benefitSection">
+          <img src={benefitBg} className='valueBg' />
           <Typography className='sectionHeader'>Our Benefits</Typography>
           <Typography className='nSummeryText'>Videtics propose une suite logicielle qui facilite la surveillance des zones protégées, l'investigation à postériori et la prise de décision en utilisant les caméras IP existantes de votre parc vidéo.</Typography>
 
@@ -131,12 +139,13 @@ export default function Home({ activeNav, setActiveNav }) {
           </Box>
           <img src={sideLine} className='leftSideLine' />
           <img src={earthInHand} className='earthInHand' />
-          <img src={sideLine} className='rightSideLine' />
+          {/* <img src={sideLine} className='rightSideLine' /> */}
 
         </Box>
 
         {/*Client testimonials  */}
         <Box className="testimonialSection">
+          <img src={testimoni} className='testimoni' />
           <Typography className='sectionHeader'>Client Testimonials</Typography>
           <Box className="testMonBox">
             <img src={testoMoniBg} className='testomoniBgImg' />
@@ -165,6 +174,7 @@ export default function Home({ activeNav, setActiveNav }) {
         {/* case studies */}
 
         <Box className="caseSection">
+          <img src={studiesBg} className='studiesBg' />
           <Typography className='sectionHeader'>Case studies</Typography>
           <Box className="caseCardBox">
             {CaseCard({ BgImg: caseImg1 })}
@@ -176,6 +186,7 @@ export default function Home({ activeNav, setActiveNav }) {
 
         {/* contact section */}
         <Box className="contacSection">
+          <img src={contactBg} className='contactBg' />
 
           <Box className="contactTextBox">
             <Typography className='sectionHeader'>Contact Us for a Free Consultation</Typography>

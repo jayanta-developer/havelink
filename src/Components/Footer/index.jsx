@@ -15,11 +15,13 @@ import TwitterIcon from "../../Assets/Images/twitter.png";
 import LinkdinIcon from "../../Assets/Images/linkdin.png";
 import InstaIcon from "../../Assets/Images/instaIcon.png";
 import G_mailIcom from "../../Assets/Images/G_mailIcon.png";
+import footerBg from "../../Assets/Images/footerBg.png"
 
 export default function Footer() {
   return (
     <>
       <Box className="footer">
+        <img src={footerBg} className='footerBg' />
         <Box className="footerMainBox">
           <Box className="footerItemBox">
             <img src={Clogo} className='Fclogo' />

@@ -36,7 +36,7 @@ export default function NavBar({ activeNav, setActiveNav }) {
   return (
     <>
       <Box className="NavBar">
-        <Box className="cLogoBox"><img src={Clogo} /></Box>
+        <Box className="cLogoBox"><img src={Clogo} onClick={() => navigate("/")} /></Box>
         <img src={MenuIcon} className='menuIcon' onClick={() => setSideMenu(!sideMenu)} />
 
 
