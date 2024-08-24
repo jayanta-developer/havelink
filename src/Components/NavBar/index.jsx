@@ -15,7 +15,7 @@ import backIcon from "../../Assets/Images/backIcon.png";
 export default function NavBar({ activeNav, setActiveNav }) {
   const navigate = useNavigate();
   const [sideMenu, setSideMenu] = useState(false);
-  const [menuVisibility, setMenuVisibility] = useState(true)
+  const [menuVisibility, setMenuVisibility] = useState(true);
 
 
   useEffect(() => {
@@ -61,13 +61,16 @@ export default function NavBar({ activeNav, setActiveNav }) {
           }}>
             <Typography>About Us</Typography>
           </Box>
-          <Box className={activeNav === 3 ? "navItem navItemActive" : "navItem"} onClick={() => setActiveNav(3)}>
+          <Box className={activeNav === 3 ? "navItem navItemActive" : "navItem"} onClick={() => {
+            setActiveNav(3)
+            navigate("/blog")
+            setSideMenu(false)
+          }}>
             <Typography>Blog</Typography>
           </Box>
           <Box className={activeNav === 4 ? "navItem navItemActive" : "navItem"} onClick={() => setActiveNav(4)}>
             <Typography>Contact Us</Typography>
           </Box>
-
         </Box>
 
 
@@ -88,11 +91,13 @@ export default function NavBar({ activeNav, setActiveNav }) {
           <Box className={activeNav === 2 ? "navItem navItemActive" : "navItem"} onClick={() => {
             setActiveNav(2)
             navigate("/about")
-
           }}>
             <Typography>About Us</Typography>
           </Box>
-          <Box className={activeNav === 3 ? "navItem navItemActive" : "navItem"} onClick={() => setActiveNav(3)}>
+          <Box className={activeNav === 3 ? "navItem navItemActive" : "navItem"} onClick={() => {
+            setActiveNav(3)
+            navigate("/blog")
+          }}>
             <Typography>Blog</Typography>
           </Box>
           <Box className={activeNav === 4 ? "navItem navItemActive" : "navItem"} onClick={() => setActiveNav(4)}>

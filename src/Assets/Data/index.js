@@ -1,3 +1,10 @@
+import blogimg1 from "../../Assets/Images/blogImg1.png";
+import blogimg2 from "../../Assets/Images/blogImg2.png";
+import blogimg3 from "../../Assets/Images/blogImg3.png";
+import blogimg4 from "../../Assets/Images/blogImg4.png";
+import blogimg5 from "../../Assets/Images/blogImg5.png";
+import blogimg6 from "../../Assets/Images/blogImg6.png";
+
 export const Arrow = () => {
   return (
     <svg
@@ -16,3 +23,60 @@ export const Arrow = () => {
     </svg>
   );
 };
+
+export const BlogData = [
+  {
+    img: blogimg1,
+    title: "There are many variations of passages of Lorem Ipsum available.",
+    subTitle:
+      "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form.",
+  },
+  {
+    img: blogimg2,
+    title: "There are many variations of passages of Lorem Ipsum available.",
+    subTitle:
+      "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form.",
+  },
+  {
+    img: blogimg3,
+    title: "There are many variations of passages of Lorem Ipsum available.",
+    subTitle:
+      "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form.",
+  },
+  {
+    img: blogimg4,
+    title: "There are many variations of passages of Lorem Ipsum available.",
+    subTitle:
+      "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form.",
+  },
+  {
+    img: blogimg5,
+    title: "There are many variations of passages of Lorem Ipsum available.",
+    subTitle:
+      "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form.",
+  },
+  {
+    img: blogimg6,
+    title: "There are many variations of passages of Lorem Ipsum available.",
+    subTitle:
+      "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form.",
+  },
+  {
+    img: blogimg4,
+    title: "There are many variations of passages of Lorem Ipsum available.",
+    subTitle:
+      "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form.",
+  },
+  {
+    img: blogimg5,
+    title: "There are many variations of passages of Lorem Ipsum available.",
+    subTitle:
+      "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form.",
+  },
+  {
+    img: blogimg6,
+    title: "There are many variations of passages of Lorem Ipsum available.",
+    subTitle:
+      "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form.",
+  },
+];
