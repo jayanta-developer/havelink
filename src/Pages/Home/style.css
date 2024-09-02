@@ -2,6 +2,7 @@
   width: 100%;
   height: 100%;
 }
+
 .heroSection {
   width: 100%;
   height: 93vh;
@@ -13,25 +14,30 @@
   padding-top: 5%;
   gap: 2.5%;
 }
+
 .heroSection p {
   z-index: 1;
   text-align: center;
   width: 90%;
 }
+
 .heroSection .brainImg {
   width: 100%;
   position: absolute;
   top: 45px;
 }
+
 .heroHeader1 {
   font-size: 16px !important;
   color: #fff;
 }
+
 .heroHeader2 {
   font-family: "Archivo" !important;
   font-size: 35px !important;
   color: #fff;
 }
+
 .heroHeader3 {
   font-family: "Archivo_Black" !important;
   font-size: 50px !important;
@@ -57,6 +63,7 @@
   margin-top: 20px;
   overflow: hidden;
 }
+
 .HeroBtn::before,
 .HeroBtn::after {
   content: "";
@@ -68,21 +75,18 @@
   border-radius: 38px;
   transition: opacity 0.8s;
 }
+
 .HeroBtn::before {
-  background: linear-gradient(
-    180deg,
-    rgba(0, 130, 222, 1) 0%,
-    rgba(88, 248, 140, 1) 80%
-  );
+  background: linear-gradient(180deg,
+      rgba(0, 130, 222, 1) 0%,
+      rgba(88, 248, 140, 1) 80%);
   opacity: 1;
 }
 
 .HeroBtn::after {
-  background: linear-gradient(
-    180deg,
-    rgba(88, 248, 140, 1) 0%,
-    rgba(0, 130, 222, 1) 80%
-  );
+  background: linear-gradient(180deg,
+      rgba(88, 248, 140, 1) 0%,
+      rgba(0, 130, 222, 1) 80%);
   opacity: 0;
 }
 
@@ -107,9 +111,11 @@
   flex-direction: column;
   align-items: center;
 }
+
 .HomelineBox .homeLineImg {
   width: 100%;
 }
+
 .aiSection {
   width: 100%;
   display: flex;
@@ -117,6 +123,7 @@
   align-items: center;
   position: relative;
 }
+
 .aisoliotionBg {
   position: absolute;
   top: 0px;
@@ -126,9 +133,11 @@
   opacity: 0.3;
   z-index: -1;
 }
+
 .homeLineCenterImg {
   width: 40%;
 }
+
 .leftSideLine {
   position: absolute;
   top: 0px;
@@ -136,6 +145,7 @@
   width: 18%;
   rotate: 180deg;
 }
+
 .rightSideLine {
   position: absolute;
   bottom: 0px;
@@ -150,6 +160,7 @@
   text-align: center;
   color: #fff;
 }
+
 .nSummeryText {
   width: 90%;
   font-family: "creato_display" !important;
@@ -157,6 +168,7 @@
   text-align: center;
   color: #fff;
 }
+
 .CAiModelBox {
   width: 90%;
   border-radius: 16px;
@@ -173,38 +185,47 @@
   backdrop-filter: blur(8px);
   background-color: #2551da0a;
 }
+
 .CAiModelBox .HeroBtn {
   min-width: none;
   width: 100%;
 }
+
 .aiCardHeader {
   font-family: "Archivo" !important;
   font-size: 35px !important;
   font-weight: 600 !important;
   color: #fff;
 }
+
 .aiCardImgBox img {
   width: 100%;
   height: 100%;
 }
+
 .aiTextB .nSummeryText {
   width: 100%;
   text-align: start;
 }
+
 .aiCardImgBox {
   width: 26%;
   max-height: 100%;
 }
+
 .aiTextB {
   width: 90%;
 }
+
 .aiSection .homeLineImg {
   width: 100%;
 }
+
 .aiSection .HeroBtn {
   width: 100%;
   min-width: unset;
 }
+
 .CaMBtnBox {
   display: flex;
   flex-direction: column;
@@ -212,9 +233,11 @@
   position: absolute;
   right: -20px;
 }
+
 .CaMBtnBox img {
   cursor: pointer;
 }
+
 .benefitSection {
   width: 100%;
   display: flex;
@@ -225,13 +248,16 @@
   padding-bottom: 80px;
   padding: 0 2%;
 }
+
 .benefitSection .leftSideLine {
   top: unset !important;
   bottom: -115px !important;
 }
+
 .benefitSection .rightSideLine {
   bottom: -320px;
 }
+
 .earthInHand {
   position: absolute;
   right: 0px;
@@ -240,6 +266,7 @@
   z-index: -1;
   opacity: 0.5;
 }
+
 .benefitCardBox {
   width: 100%;
   display: flex;
@@ -252,9 +279,11 @@
   padding: 0px 20px;
   padding-top: 50px;
 }
+
 .benefitCardBox::-webkit-scrollbar {
   display: none;
 }
+
 .benefitCard {
   width: 25%;
   min-width: 275px;
@@ -269,6 +298,7 @@
   gap: 16px;
   position: relative;
 }
+
 .benefitCard p {
   font-size: 23px !important;
   font-family: "Archivo" !important;
@@ -277,12 +307,14 @@
   text-align: center;
   z-index: 1;
 }
+
 .benefitCard span {
   font-size: 17px !important;
   color: #ffffffde;
   text-align: center;
   z-index: 1;
 }
+
 .bnfCardLogoBox {
   width: 40%;
   min-height: 108px;
@@ -294,9 +326,11 @@
   position: absolute;
   top: -50px;
 }
+
 .bnfCardLogoBox img {
   width: 48%;
 }
+
 .bnfBg {
   position: absolute;
   top: 0px;
@@ -304,6 +338,7 @@
   height: 100%;
   backdrop-filter: blur(3px);
 }
+
 .testimonialSection {
   width: 100%;
   display: flex;
@@ -312,6 +347,7 @@
   margin-top: 77px;
   position: relative;
 }
+
 .testimoni {
   position: absolute;
   top: 0px;
@@ -321,6 +357,7 @@
   opacity: 0.6;
   z-index: -1;
 }
+
 .testMonBox {
   width: 95%;
   height: 424px;
@@ -335,19 +372,19 @@
   width: 89px;
   height: 5px;
   background: rgb(0, 130, 222);
-  background: linear-gradient(
-    180deg,
-    rgba(0, 130, 222, 1) 0%,
-    rgba(88, 248, 140, 1) 80%
-  );
+  background: linear-gradient(180deg,
+      rgba(0, 130, 222, 1) 0%,
+      rgba(88, 248, 140, 1) 80%);
   z-index: 1;
   margin-top: 5px;
 }
+
 .starBottomBox {
   width: 70%;
   z-index: 1;
   position: relative;
 }
+
 .starBox {
   display: flex;
   flex-direction: row;
@@ -356,13 +393,16 @@
   margin-bottom: 20px;
   padding-left: 24%;
 }
+
 .starBox img {
   width: 16px;
 }
+
 .testMonNtext {
   font-size: 11px !important;
   color: #fff;
 }
+
 .starBottomBox .testMonNtext {
   font-style: italic;
 }
@@ -374,6 +414,7 @@
   z-index: 1;
   margin-bottom: 9px;
 }
+
 .testomoniBgImg {
   width: 100%;
   height: 100%;
@@ -381,18 +422,21 @@
   top: 0px;
   opacity: 0.8;
 }
+
 .titleBox .titleText {
   font-size: 20px !important;
   color: #fff;
   font-weight: 600 !important;
   font-family: "Archivo" !important;
 }
+
 .coteImg {
   width: 13px;
   position: absolute;
   top: 55px;
   right: 36px;
 }
+
 .caseSection {
   width: 100%;
   display: flex;
@@ -400,6 +444,7 @@
   align-items: center;
   position: relative;
 }
+
 .studiesBg {
   position: absolute;
   top: 0px;
@@ -409,6 +454,7 @@
   opacity: 0.7;
   z-index: -1;
 }
+
 .caseCardBox {
   width: 100%;
   display: flex;
@@ -420,9 +466,11 @@
   overflow-y: hidden;
   padding: 0px 20px;
 }
+
 .caseCardBox::-webkit-scrollbar {
   display: none;
 }
+
 .caseCard {
   width: 22%;
   max-width: 302px;
@@ -430,25 +478,26 @@
   height: 500px;
   position: relative;
 }
+
 .caseCard .caseCardBg {
   width: 100%;
   height: 100%;
   position: absolute;
 }
+
 .gradiantBox {
   width: 100%;
   height: 100%;
   position: absolute;
-  background: linear-gradient(
-    180deg,
-    rgba(0, 130, 222, 0) 0%,
-    rgb(17, 17, 17) 80%
-  );
+  background: linear-gradient(180deg,
+      rgba(0, 130, 222, 0) 0%,
+      rgb(17, 17, 17) 80%);
   display: flex;
   flex-direction: column;
   justify-content: end;
   padding: 0 16px 40px 16px;
 }
+
 .CSUInfoBox {
   width: 100%;
   display: flex;
@@ -457,26 +506,31 @@
   gap: 20px;
   margin-bottom: 20px;
 }
+
 .CSUserInfoBox {
   display: flex;
   flex-direction: row;
   align-items: center;
   gap: 8px;
 }
+
 .CSUserInfoBox .Avatar {
   width: 34px;
   height: 34px;
   border-radius: 50%;
   overflow: hidden;
 }
+
 .CSUserInfoBox .Avatar img {
   width: 100%;
   height: 100%;
 }
+
 .CSUserInfoBox p {
   font-size: 14px !important;
   color: #fff;
 }
+
 .CSDateBox {
   border-left: 1px solid #ffffffc9;
   display: flex;
@@ -485,14 +539,17 @@
   gap: 10px;
   padding-left: 20px;
 }
+
 .CSDateBox img {
   width: 15px;
   height: 15px;
 }
+
 .CSDateBox p {
   font-size: 14px !important;
   color: #fff;
 }
+
 .readMoretab {
   display: flex;
   flex-direction: row;
@@ -500,24 +557,29 @@
   align-items: center;
   cursor: pointer;
 }
+
 .readMoretab p {
   font-size: 16px !important;
   font-weight: 500 !important;
   color: #58f88c;
 }
+
 .readMoretab img {
   width: 10px;
 }
+
 .gradiantBox samp {
   font-size: 20px !important;
   font-weight: 500 !important;
   color: #fff;
 }
+
 .gradiantBox span {
   font-size: 15px !important;
   color: #fff;
   margin: 9px 0;
 }
+
 .contacSection {
   width: 100%;
   margin-top: 100px;
@@ -532,6 +594,7 @@
   margin-bottom: 60px;
   position: relative;
 }
+
 .contactBg {
   position: absolute;
   top: 0px;
@@ -541,25 +604,31 @@
   opacity: 0.9;
   z-index: -1;
 }
+
 .contacSection .leftSideLine {
   top: 114px;
 }
+
 .contacSection .sectionHeader {
   text-align: center !important;
 }
+
 .contacSection .contactTextBox span {
   text-align: center !important;
 }
+
 .contactTextBox {
   width: 100%;
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
+
 .contactTextBox span {
   font-size: 16px !important;
   color: #fff;
 }
+
 .contactInputBox {
   width: 100%;
   border-radius: 14px;
@@ -571,14 +640,17 @@
   align-items: center;
   backdrop-filter: blur(8px);
 }
+
 .inputWl {
   width: 100%;
 }
+
 .inputWl p {
   color: #ffffffc4;
   margin-bottom: 8px;
   text-align: start;
 }
+
 .inputBox {
   width: 100%;
   height: 50px;
@@ -588,6 +660,7 @@
   display: flex;
   align-items: center;
 }
+
 .inputBox input {
   width: 100%;
   height: 100%;
@@ -597,13 +670,16 @@
   color: #fff;
   padding-left: 42px;
 }
+
 .inputBox input :focus {
   outline: none;
 }
+
 .inputBox input :active {
   outline: none;
   border: none;
 }
+
 .inputBox img {
   position: absolute;
   left: 18px;
@@ -613,6 +689,7 @@
   height: 80px;
   border-radius: 44px;
 }
+
 .messageBox textarea {
   width: 100%;
   height: 100%;
@@ -622,13 +699,16 @@
   color: #fff;
   padding-left: 55px;
 }
+
 .inputBox textarea :focus {
   outline: none;
 }
+
 .inputBox textarea :active {
   outline: none;
   border: none;
 }
+
 .inputFBox {
   width: 100%;
   display: flex;
@@ -636,10 +716,12 @@
   justify-content: center;
   gap: 20px;
 }
+
 .contactTextBox .sectionHeader {
   text-align: start;
   font-size: 40px !important;
 }
+
 .contactInputBox .HeroBtn {
   width: 180px;
 }
@@ -649,83 +731,107 @@
   .heroHeader1 {
     font-size: 24px !important;
   }
+
   .heroHeader2 {
     font-size: 70px !important;
   }
+
   .heroHeader3 {
     font-size: 80px !important;
   }
+
   .CAiModelBox {
     flex-direction: row;
     padding: 0 46px;
     height: 400px;
     gap: 60px;
   }
+
   .aiCardImgBox {
     width: 30%;
   }
+
   .aiTextB {
     width: 70%;
   }
+
   .sectionHeader {
     font-size: 50px !important;
   }
+
   .testimonialSection {
     margin-top: 200px;
   }
+
   .testMonBox {
     height: 650px;
     padding-top: 100px;
   }
+
   .titleBox .titleText {
     font-size: 32px !important;
   }
+
   .testMonNtext {
     font-size: 17px !important;
   }
+
   .coteImg {
     width: 70px;
     top: 85px;
     right: 69px;
   }
+
   .titleBox {
     margin-bottom: 55px;
   }
+
   .contactTextBox .sectionHeader {
     font-size: 50px !important;
   }
+
   .inputBox img {
     left: 25px;
   }
+
   .inputBox input {
     padding-left: 55px;
   }
+
   .heroSection .brainImg {
     width: 550px;
     top: -55px;
   }
+
   .heroSection {
     justify-content: start;
   }
+
   .aiSection {
     margin-top: 40px;
   }
+
   .aiSection .HeroBtn {
     width: 60%;
     min-width: 294px;
   }
+
   .HeroBtn {
     height: 58px;
   }
+
   .starBottomBox {
     padding-left: 5%;
   }
+
   .starBox {
     padding: 0;
   }
+
   .contacSection .leftSideLine {
     top: 130px;
   }
+
   .HeroBtn p {
     font-size: 16px !important;
   }
@@ -739,51 +845,66 @@
     padding-top: 50px;
     justify-content: center;
   }
+
   .caseCardBox {
     justify-content: center;
   }
+
   .heroSection {
     height: 100vh;
   }
+
   .nSummeryText {
     width: 60%;
     font-size: 18px !important;
   }
+
   .CAiModelBox {
     width: 70%;
   }
+
   .aiCardHeader {
     font-size: 42px !important;
   }
+
   .HeroBtn p {
     font-size: 15px !important;
   }
+
   .aiCardImgBox {
     height: 100%;
   }
+
   .testMonBox {
     width: 60%;
   }
+
   .caseSection {
     margin-top: 200px;
   }
+
   .contacSection {
     flex-direction: row;
     padding: 0;
     margin-bottom: 60px;
   }
+
   .contactTextBox {
     width: 40%;
   }
+
   .contactInputBox {
     width: 40%;
   }
+
   .contacSection .leftSideLine {
     top: 380px;
   }
+
   .heroHeader1 {
     font-size: 30px !important;
   }
+
   .benefitCard {
     min-width: 255px;
   }

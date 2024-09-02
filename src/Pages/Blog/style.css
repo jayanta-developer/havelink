@@ -1,6 +1,7 @@
 .blogPage {
   width: 100%;
 }
+
 .blogMainSection {
   width: 100%;
   padding: 0 2%;
@@ -10,14 +11,17 @@
   padding-top: 8%;
   position: relative;
 }
+
 .blogMainSection .sectionHeader {
   width: 100%;
   text-align: start;
 }
+
 .blogMainSection .nSummeryText {
   width: 100%;
   text-align: start;
 }
+
 .blogBcardBox {
   width: 100%;
   display: flex;
@@ -28,9 +32,11 @@
   overflow: scroll;
   overflow-y: hidden;
 }
+
 .blogBcardBox::-webkit-scrollbar {
   display: none;
 }
+
 .blogBCard {
   width: 50%;
   min-width: 330px;
@@ -38,37 +44,41 @@
   display: flex;
   flex-direction: column;
   gap: 35px;
-  background: linear-gradient(
-    180deg,
-    rgb(0 130 222 / 10%) 0%,
-    rgb(11 47 22) 100%
-  );
+  background: linear-gradient(180deg,
+      rgb(0 130 222 / 10%) 0%,
+      rgb(11 47 22) 100%);
   -webkit-backdrop-filter: blur(3px);
   backdrop-filter: blur(3px);
 }
+
 .blogBCardTextSection {
   width: 100%;
   display: flex;
   flex-direction: column;
   gap: 5px;
 }
+
 .bbCardMainText {
   font-size: 18px !important;
   font-weight: 500 !important;
   color: #fff;
 }
+
 .bbCardSubText {
   font-size: 12px !important;
   color: #fffc;
   font-family: "creato_display" !important;
 }
+
 .bbCardImg {
   width: 100%;
 }
+
 .blogPage .CSUInfoBox {
   margin-bottom: 0px;
   gap: 5px;
 }
+
 .blogCardBox {
   width: 100%;
   display: flex;
@@ -79,9 +89,11 @@
   overflow-y: hidden;
   gap: 25px;
 }
+
 .blogCardBox::-webkit-scrollbar {
   display: none;
 }
+
 .blogCard {
   width: 32%;
   min-width: 282px;
@@ -89,14 +101,13 @@
   display: flex;
   flex-direction: column;
   gap: 35px;
-  background: linear-gradient(
-    180deg,
-    rgb(0 130 222 / 10%) 0%,
-    rgb(11 47 22) 100%
-  );
+  background: linear-gradient(180deg,
+      rgb(0 130 222 / 10%) 0%,
+      rgb(11 47 22) 100%);
   -webkit-backdrop-filter: blur(3px);
   backdrop-filter: blur(3px);
 }
+
 .pagination {
   width: 100%;
   padding: 10% 0;
@@ -107,6 +118,7 @@
   justify-content: center;
   position: relative;
 }
+
 .paginationBtn {
   width: 30px;
   height: 30px;
@@ -118,17 +130,21 @@
   border: 2px solid #fffc;
   cursor: pointer;
 }
+
 .paginationBtn p {
   color: #0056de;
   margin: 0;
 }
+
 .paginationBtnActive {
   background: #fff0;
 }
+
 .paginationBtnActive p {
   color: #fff;
   margin: 0;
 }
+
 .blogBg {
   position: absolute;
   width: 100%;
@@ -137,6 +153,7 @@
   z-index: -1;
   opacity: 0.3;
 }
+
 .blogLastBg {
   width: 100%;
   position: absolute;
@@ -145,30 +162,37 @@
   z-index: -1;
   opacity: 0.4;
 }
+
 .blogPage .CSDateBox {
   padding-left: 8px;
 }
+
 .CSUserInfoBox p {
   font-size: 10px !important;
 }
+
 .CSDateBox p {
   font-size: 10px !important;
 }
+
 /* Tabe view */
 @media only screen and (min-width: 768px) {
   .blogBcardBox {
     overflow: unset;
     overflow-y: unset;
   }
+
   .blogCardBox {
     flex-wrap: wrap;
     overflow: unset;
     overflow-y: unset;
     gap: 0;
   }
+
   .blogBCard {
     min-width: unset;
   }
+
   .blogCard {
     width: 32%;
     min-width: unset;
@@ -181,32 +205,41 @@
   .blogMainSection {
     padding: 0 12%;
   }
+
   .bbCardSubText {
     font-size: 16px !important;
   }
+
   .bbCardMainText {
     font-size: 28px !important;
     font-weight: 700 !important;
   }
+
   .blogBCard .CSUInfoBox {
     margin-bottom: 0px;
     gap: 20px;
   }
+
   .blogPage .CSDateBox {
     padding-left: 20px;
   }
+
   .CSUserInfoBox p {
     font-size: 14px !important;
   }
+
   .CSDateBox p {
     font-size: 14px !important;
   }
+
   .blogCardBox {
     gap: 20px;
   }
+
   .blogCard {
     margin-bottom: 0;
   }
+
   .pagination {
     padding: 3% 0;
   }

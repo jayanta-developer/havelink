@@ -1,6 +1,7 @@
 .aboutPage {
   width: 100%;
 }
+
 .whoWeareSection {
   width: 100%;
   height: 89vh;
@@ -9,6 +10,7 @@
   padding-right: 4%;
   padding-top: 42%;
 }
+
 .aboutFBg {
   width: 100%;
   height: 58%;
@@ -19,22 +21,27 @@
   opacity: 0.8;
   /* object-fit: cover; */
 }
+
 .whoWeareSection .nSummeryText2 {
   font-size: 18px !important;
   color: #fff;
 }
+
 .whoWeareSection .aboutNText {
   width: 100%;
   text-align: center;
 }
+
 .whoWeareSection .sectionHeader {
   text-align: start;
 }
+
 .aboutNText {
   width: 90%;
   font-size: 16px !important;
   color: #ffffff;
 }
+
 .ourStorySection {
   width: 100%;
   display: flex;
@@ -42,9 +49,11 @@
   align-items: center;
   position: relative;
 }
+
 .ourStorySection .aboutNText {
   text-align: center;
 }
+
 .behindTeamSection {
   width: 100%;
   display: flex;
@@ -53,10 +62,12 @@
   margin-top: 70px;
   padding: 0 2%;
 }
+
 .behindTeamSection .aiCardHeader {
   width: 40%;
   text-align: center;
 }
+
 .teamCardBox {
   width: 100%;
   display: flex;
@@ -69,20 +80,20 @@
   overflow-y: hidden;
   padding: 0 20px;
 }
+
 .teamCardBox::-webkit-scrollbar {
   display: none;
 }
+
 .teamCard {
   width: 22%;
   max-width: 300px;
   min-width: 300px;
   height: 500px;
   background: rgb(21, 94, 124);
-  background: linear-gradient(
-    180deg,
-    rgba(21, 94, 124, 1) 0%,
-    rgba(0, 0, 0, 1) 80%
-  );
+  background: linear-gradient(180deg,
+      rgba(21, 94, 124, 1) 0%,
+      rgba(0, 0, 0, 1) 80%);
   border-radius: 16px;
   display: flex;
   justify-content: center;
@@ -91,6 +102,7 @@
   overflow: hidden;
   cursor: pointer;
 }
+
 .teamCard .teamBg {
   position: absolute;
   width: 90%;
@@ -98,6 +110,7 @@
   bottom: 0px;
   z-index: 1;
 }
+
 .TeamCardFBox {
   position: absolute;
   width: 100%;
@@ -107,23 +120,24 @@
   justify-content: end;
   flex-direction: column;
   z-index: 1;
-  background: linear-gradient(
-    180deg,
-    rgba(2, 24, 33, 0) 32.62%,
-    #021821 87.89%
-  );
+  background: linear-gradient(180deg,
+      rgba(2, 24, 33, 0) 32.62%,
+      #021821 87.89%);
   transition: all 0.8s ease-out;
 }
+
 .tcfbHeader {
   font-size: 26px !important;
   font-weight: 700 !important;
   color: #fff;
   font-family: "Archivo" !important;
 }
+
 .tcfbSubHeader {
   font-size: 18px !important;
   color: #fff;
 }
+
 .socialMBox {
   display: flex;
   flex-direction: column;
@@ -134,23 +148,24 @@
   top: 20px;
   right: 20px;
 }
+
 .socialMBox img {
   width: 18px;
   cursor: pointer;
 }
+
 .socialMBox .fIcon {
   width: 28px;
 }
+
 .TeamCardSBox {
   width: 100%;
   height: 100%;
   padding: 20px;
   position: absolute;
-  background: linear-gradient(
-    180.26deg,
-    rgba(21, 94, 124, 0.9) -0.56%,
-    rgba(21, 94, 124, 0.9) 99.77%
-  );
+  background: linear-gradient(180.26deg,
+      rgba(21, 94, 124, 0.9) -0.56%,
+      rgba(21, 94, 124, 0.9) 99.77%);
   z-index: 1;
   display: flex;
   flex-direction: column;
@@ -159,6 +174,7 @@
   transition: all 0.8s ease-out;
   translate: -100%;
 }
+
 .TeamCardSBox .socialMBox {
   flex-direction: row;
   position: relative;
@@ -166,12 +182,15 @@
   top: unset;
   right: unset;
 }
+
 .teamCard:hover .TeamCardFBox {
   translate: 100%;
 }
+
 .teamCard:hover .TeamCardSBox {
   translate: 0%;
 }
+
 .partnerSection {
   width: 100%;
   display: flex;
@@ -181,6 +200,7 @@
   position: relative;
   padding: 0 2%;
 }
+
 .partnarsBg {
   position: absolute;
   top: 0px;
@@ -190,6 +210,7 @@
   opacity: 0.2;
   z-index: -1;
 }
+
 .partnerCardBox {
   width: 100%;
   display: flex;
@@ -202,9 +223,11 @@
   overflow-y: hidden;
   padding: 0 20px;
 }
+
 .partnerCardBox::-webkit-scrollbar {
   display: none;
 }
+
 .partnerCard {
   width: 22%;
   min-width: 288px;
@@ -228,15 +251,18 @@
   padding-bottom: 40px;
   padding: 0 2%;
 }
+
 .videoBox {
   width: 100%;
   margin-top: 40px;
 }
-.videoBox > div {
+
+.videoBox>div {
   width: 100% !important;
   height: 100%;
   margin: 0px;
 }
+
 .earthInHandImg {
   position: absolute;
   bottom: 0px;
@@ -244,6 +270,7 @@
   width: 162px;
   opacity: 0.5;
 }
+
 .chainImg {
   position: absolute;
   bottom: 0px;
@@ -251,6 +278,7 @@
   width: 233px;
   opacity: 0.5;
 }
+
 .handShakImgBg {
   position: absolute;
   top: 0px;
@@ -260,6 +288,7 @@
   z-index: -1;
   opacity: 0.2;
 }
+
 .valueBg {
   position: absolute;
   top: 0px;
@@ -269,6 +298,7 @@
   opacity: 0.2;
   z-index: -1;
 }
+
 .StoryBg {
   position: absolute;
   top: 95px;
@@ -284,31 +314,39 @@
   .partnerCard {
     height: 115px;
   }
+
   .partnerCard img {
     width: 100%;
   }
+
   .AboutVideoSection {
     padding: 40px 0;
   }
+
   .videoBox {
     width: 90%;
     margin-top: 40px;
   }
+
   .aboutNText {
     width: 90%;
   }
+
   .whoWeareSection .aboutNText {
     width: 90%;
     text-align: start;
   }
+
   .whoWeareSection {
     padding-left: 6%;
     height: 83vh;
     padding-top: 4%;
   }
+
   .aboutFBg {
     height: 100%;
   }
+
   .partnerCardBox {
     flex-wrap: wrap;
     justify-content: center;
@@ -324,29 +362,37 @@
     overflow: unset;
     overflow-y: unset;
   }
+
   .teamCard {
     min-width: 277px;
   }
+
   .partnerCard {
     height: 160px;
   }
+
   .partnerCard img {
     width: unset;
   }
+
   .AboutVideoSection {
     margin: 70px 0;
     padding: 110px 0;
   }
+
   .videoBox {
     width: 50%;
     margin-top: 40px;
   }
+
   .aboutNText {
     width: 70%;
   }
+
   .whoWeareSection .aboutNText {
     width: 70%;
   }
+
   .whoWeareSection {
     padding-left: 13%;
   }

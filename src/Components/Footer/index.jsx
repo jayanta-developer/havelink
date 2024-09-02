@@ -68,7 +68,7 @@ export default function Footer() {
         </Box>
         <Box className="footerBottomBox">
           <Typography className='footerNText'>Copyright © 2024 . All rights reserved</Typography>
-          <Typography className='footerNText'>Terms & Conditions    <span>|</span>    Privacy-Policy    <span>|</span>    Cancellation and Refund Policy</Typography>
+          <Typography className='footerNText'>Terms & Conditions    <span>|</span>    Privacy Policy    <span>|</span>    Cancellation and Refund Policy</Typography>
         </Box>
       </Box>
     </>
