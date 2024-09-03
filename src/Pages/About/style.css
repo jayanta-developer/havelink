@@ -130,7 +130,7 @@
   font-size: 26px !important;
   font-weight: 700 !important;
   color: #fff;
-  font-family: "Archivo" !important;
+  font-family: "Archivo", sans-serif !important;
 }
 
 .tcfbSubHeader {

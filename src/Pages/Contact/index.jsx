@@ -7,6 +7,7 @@ import NavBar from "../../Components/NavBar";
 import Footer from "../../Components/Footer";
 
 //images
+import contactBanner from "../../Assets/Images/contactbanner.png";
 import userIcon from "../../Assets/Images/userIcon.png";
 import textIcon from "../../Assets/Images/textIcon.png";
 import mailIcom from "../../Assets/Images/mailIcon.png";
@@ -20,6 +21,7 @@ export default function Contact({ activeNav, setActiveNav }) {
     <>
       <Box className="contactPage">
         <NavBar activeNav={activeNav} setActiveNav={setActiveNav} />
+        <img src={contactBanner} className="contactBanner" />
 
         <Box className="contactMainSection">
           <Typography className="sectionHeader">We're Here to Help</Typography>

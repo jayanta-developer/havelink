@@ -1,39 +1,94 @@
 @font-face {
   font-family: "creato_display";
-  src: url("./Assets/Fonts/creato_display/CreatoDisplay-Regular.otf")
-    format("truetype");
+  src: url("./Assets/Fonts/creato_display/CreatoDisplay-Regular.otf") format("truetype");
 }
+
 @font-face {
   font-family: "Archivo";
-  src: url("./Assets/Fonts/Archivo/Archivo-VariableFont_wdth\,wght.ttf")
-    format("truetype");
+  src: url("./Assets/Fonts/Archivo/Archivo-VariableFont_wdth\,wght.ttf") format("truetype");
 }
+
 @font-face {
   font-family: "Archivo_Black";
-  src: url("./Assets/Fonts/Archivo_Black/ArchivoBlack-Regular.ttf")
-    format("truetype");
+  src: url("./Assets/Fonts/Archivo_Black/ArchivoBlack-Regular.ttf") format("truetype");
 }
+
+@font-face {
+  font-family: 'creato_displayblack';
+  src: url('./Assets/Fonts/creatodisplay-black-webfont.woff2') format('woff2'),
+    url('./Assets/Fonts/creatodisplay-black-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'creato_displaybold';
+  src: url('./Assets/Fonts/creatodisplay-bold-webfont.woff2') format('woff2'),
+    url('./Assets/Fonts/creatodisplay-bold-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'creato_displayextrabold';
+  src: url('./Assets/Fonts/creatodisplay-extrabold-webfont.woff2') format('woff2'),
+    url('./Assets/Fonts/creatodisplay-extrabold-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'creato_displaylight';
+  src: url('./Assets/Fonts/creatodisplay-light-webfont.woff2') format('woff2'),
+    url('./Assets/Fonts/creatodisplay-light-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'creato_displaymedium';
+  src: url('./Assets/Fonts/creatodisplay-medium-webfont.woff2') format('woff2'),
+    url('./Assets/Fonts/creatodisplay-medium-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'creato_displayregular';
+  src: url('./Assets/Fonts/creatodisplay-regular-webfont.woff2') format('woff2'),
+    url('./Assets/Fonts/creatodisplay-regular-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&display=swap');
+
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
   user-select: none;
-  font-family: "creato_display" !important;
+  font-family: 'creato_displayregular' !important;
 }
+
 body {
   background-color: unset;
 }
+
 .pointer {
   cursor: pointer;
 }
+
 #c_n4 {
   opacity: 0.3 !important;
 }
+
 @media only screen and (min-width: 768px) {
   #c_n4 {
     opacity: 0.6 !important;
   }
 }
+
 /* Target the scrollbar thumb and track in WebKit-based browsers (Chrome, Safari) */
 ::-webkit-scrollbar {
   width: 5px;
@@ -69,10 +124,10 @@ body {
   background-color: #f1f1f1;
   /* Color of the scrollbar track */
 }
+
 html {
   height: 100%;
-  background: url("https://wallpaperlayer.com/img/2015/6/gaussian-blur-wallpaper-3220-3424-hd-wallpapers.jpg")
-    no-repeat center center fixed;
+  background: url("https://wallpaperlayer.com/img/2015/6/gaussian-blur-wallpaper-3220-3424-hd-wallpapers.jpg") no-repeat center center fixed;
   background-size: cover;
   background-color: rgb(3 22 22);
 }
