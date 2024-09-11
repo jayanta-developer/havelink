@@ -97,6 +97,15 @@
   z-index: 99999;
   -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
+
+  background: rgba(
+    17,
+    17,
+    17,
+    0.76
+  ); /* Ensure there's a semi-transparent background */
+  -webkit-backdrop-filter: blur(10px); /* For Safari */
+
   position: absolute;
   top: 0px;
   left: 0px;
