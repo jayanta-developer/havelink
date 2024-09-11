@@ -269,11 +269,34 @@ export default function Home({ activeNav, setActiveNav }) {
               </Box>
             </Box>
 
+            <Box className="inputFBox CompanyBox">
+              <Box className="inputWl">
+                <Typography>Size of the Company</Typography>
+                <Box className="inputBox">
+                  <input type="text" placeholder="Size of the Company" />
+                </Box>
+              </Box>
+
+              <Box className="inputWl">
+                <Typography>Turnover of the company</Typography>
+                <Box className="inputBox">
+                  <input type="text" placeholder="turnover of the company" />
+                </Box>
+              </Box>
+            </Box>
+
             <Box className="inputWl">
               <Typography>Email</Typography>
               <Box className="inputBox">
                 <input type="text" placeholder="Mail" />
                 <img src={mailIcom} />
+              </Box>
+            </Box>
+
+            <Box className="inputWl">
+              <Typography>Interest in</Typography>
+              <Box className="inputBox">
+                <input type="text" placeholder="Developement" />
               </Box>
             </Box>
 
