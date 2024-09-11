@@ -45,7 +45,7 @@ export default function Footer() {
           </Box>
 
           <Box className="footerItemBox subscribeBox">
-            <Typography className='subHeader'>SUBSCRIBE TO OUR NEWS LETTER :</Typography>
+            <Typography className='subHeader'>SUBSCRIBE TO OUR NEWS LETTER</Typography>
 
             <Box className="subInnerBox">
               <Box className="inputBox">
