@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./style.css";
+import { useNavigate } from "react-router-dom"
 
 //components
 import { Box, Typography, Button } from "@mui/material";
@@ -18,6 +19,7 @@ import { BlogData } from "../../Assets/Data";
 
 const itemsPerPage = 6;
 export default function Blog({ activeNav, setActiveNav }) {
+  const Navigate = useNavigate()
   setActiveNav(3);
   const [currentPage, setCurrentPage] = useState(1);
   const totalPages = Math.ceil(BlogData.length / itemsPerPage);
@@ -34,7 +36,7 @@ export default function Blog({ activeNav, setActiveNav }) {
 
   const BlogBCard = ({ img, title, subtitle }) => {
     return (
-      <Box className="blogBCard">
+      <Box className="blogBCard" onClick={() => Navigate("/blog-details")}>
         <img src={img} className="bbCardImg" />
         <Box className="blogBCardTextSection">
           <Box className="CSUInfoBox">
@@ -58,7 +60,7 @@ export default function Blog({ activeNav, setActiveNav }) {
 
   const blogCard = ({ img, title, subtitle, key }) => {
     return (
-      <Box className="blogCard" key={key}>
+      <Box onClick={() => Navigate("/blog-details")} className="blogCard" key={key}>
         <img src={img} />
         <Box className="blogBCardTextSection">
           <Box className="CSUInfoBox">

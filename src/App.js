@@ -6,6 +6,7 @@ import Home from "./Pages/Home";
 import Solutions from "./Pages/Solutions";
 import About from "./Pages/About";
 import Blog from "./Pages/Blog";
+import BlogDetail from "./Pages/BlogDetails";
 import Contact from "./Pages/Contact";
 
 export default function App() {
@@ -20,7 +21,9 @@ export default function App() {
         />
         <Route
           path="/solutions"
-          element={<Solutions activeNav={activeNav} setActiveNav={setActiveNav} />}
+          element={
+            <Solutions activeNav={activeNav} setActiveNav={setActiveNav} />
+          }
         />
         <Route
           path="/about"
@@ -31,8 +34,16 @@ export default function App() {
           element={<Blog activeNav={activeNav} setActiveNav={setActiveNav} />}
         />
         <Route
+          path="/blog-details"
+          element={
+            <BlogDetail activeNav={activeNav} setActiveNav={setActiveNav} />
+          }
+        />
+        <Route
           path="/contact"
-          element={<Contact activeNav={activeNav} setActiveNav={setActiveNav} />}
+          element={
+            <Contact activeNav={activeNav} setActiveNav={setActiveNav} />
+          }
         />
       </Routes>
     </>
