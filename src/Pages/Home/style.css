@@ -134,7 +134,7 @@
   left: 0px;
   width: 100%;
   height: 100%;
-  opacity: 0.3;
+  opacity: 0.1;
   z-index: -1;
 }
 
@@ -247,10 +247,10 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 40px;
   position: relative;
   padding-bottom: 80px;
   padding: 0 2%;
+  padding-top: 40px;
 }
 
 .benefitSection .leftSideLine {
@@ -358,7 +358,7 @@
   left: 0px;
   width: 100%;
   height: 100%;
-  opacity: 0.6;
+  opacity: 0.3;
   z-index: -1;
 }
 
