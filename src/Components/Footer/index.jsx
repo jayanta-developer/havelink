@@ -7,8 +7,8 @@ import { Box, Typography } from '@mui/material';
 //images
 import Clogo from "../../Assets/Images/Clogo.png";
 import footerClog1 from "../../Assets/Images/footerColo1.png";
-import footerClog2 from "../../Assets/Images/footerColo2.png";
-import footerClog3 from "../../Assets/Images/footerColo3.png";
+import footerClog2 from "../../Assets/Images/card4.svg";
+import footerClog3 from "../../Assets/Images/card5.svg";
 import footerClog4 from "../../Assets/Images/footerColo4.png";
 import facebookIcon from "../../Assets/Images/facebook-logo.png";
 import TwitterIcon from "../../Assets/Images/twitter.png";
@@ -56,7 +56,6 @@ export default function Footer() {
                 <Typography>SUBSCRIBE</Typography>
               </Box>
             </Box>
-
           </Box>
 
         </Box>

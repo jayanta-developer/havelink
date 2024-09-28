@@ -18,7 +18,7 @@
   top: 0px;
   left: 0px;
   z-index: -2;
-  opacity: 0.8;
+  opacity: 0.3;
   object-fit: cover;
   margin-top: 0%;
 }
@@ -189,14 +189,14 @@
   top: unset;
   right: unset;
 }
-
+/* 
 .teamCard:hover .TeamCardFBox {
   translate: 100%;
 }
 
 .teamCard:hover .TeamCardSBox {
   translate: 0%;
-}
+} */
 
 .partnerSection {
   width: 100%;

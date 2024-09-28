@@ -39,6 +39,10 @@ import benefitBg from "../../Assets/Images/benefitBg.png";
 import testimoni from "../../Assets/Images/testimoBg.png";
 import studiesBg from "../../Assets/Images/studiesBg.png";
 import contactBg from "../../Assets/Images/contactBg.png";
+import card1 from "../../Assets/Images/Card1.svg"
+import card2 from "../../Assets/Images/Card2.svg"
+import card3 from "../../Assets/Images/cardB3.svg"
+import card4 from "../../Assets/Images/card3.svg"
 
 export default function Home({ activeNav, setActiveNav }) {
   setActiveNav(0);
@@ -148,25 +152,25 @@ export default function Home({ activeNav, setActiveNav }) {
 
           <Box className="benefitCardBox">
             {BenefitCard({
-              icon: bnfIcon1,
+              img: card1,
               title: "Customizable AI Models",
               summery:
                 "Our Gen AI tool can be customized to align with your industry-specific requirements, ensuring it delivers maximum value and efficiency",
             })}
             {BenefitCard({
-              icon: bnfIcon2,
+              img: card2,
               title: "Advanced Predictive Analytics",
               summery:
                 "Leverage our AI's powerful predictive capabilities to anticipate market trends, optimize operations, and drive strategic decisions.",
             })}
             {BenefitCard({
-              icon: bnfIcon3,
+              img: card3,
               title: "Expertise in AI Customization",
               summery:
                 "Our team of AI experts specializes in creating customized solutions that align perfectly with your specific needs and goals.",
             })}
             {BenefitCard({
-              icon: bnfIcon4,
+              img: card4,
               title: "Commitment to Security",
               summery:
                 "We prioritize the security and privacy of your data, ensuring that our solutions comply with the highest standards and regulatory requirements.",

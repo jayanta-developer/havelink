@@ -6,7 +6,10 @@
   margin-bottom: 30px !important;
 }
 .blogCoverBox {
+  width: 100%;
   backdrop-filter: blur(10px);
+  margin: 30px 0;
+  padding: 25px;
 }
 .blogCoverBox img {
   width: 100%;

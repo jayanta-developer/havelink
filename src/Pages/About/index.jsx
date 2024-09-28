@@ -11,10 +11,6 @@ import { BenefitCard } from "../../Components/Util";
 import ReactPlayer from "react-player";
 
 //images
-import bnfIcon1 from "../../Assets/Images/bnfIcon1.png";
-import bnfIcon2 from "../../Assets/Images/bnfIcon2.png";
-import bnfIcon3 from "../../Assets/Images/bnfIcon3.png";
-import bnfIcon4 from "../../Assets/Images/bnfIcon4.png";
 import pageBg1 from "../../Assets/Images/aboutPageBG1.png";
 import teamImg1 from "../../Assets/Images/teamImg1.png";
 import teamImg2 from "../../Assets/Images/teamImag2.png";
@@ -38,6 +34,10 @@ import handShakImgBg from "../../Assets/Images/professional-handshake-with-digit
 import valueBg from "../../Assets/Images/valueBg.png";
 import partnarsBg from "../../Assets/Images/partnersBg.png";
 import MeetBg from "../../Assets/Images/meetBg.png";
+import card1 from "../../Assets/Images/Card1.svg"
+import card2 from "../../Assets/Images/Card2.svg"
+import card3 from "../../Assets/Images/cardB3.svg"
+import card4 from "../../Assets/Images/card3.svg"
 
 export default function About({ activeNav, setActiveNav }) {
   setActiveNav(2);
@@ -189,25 +189,25 @@ export default function About({ activeNav, setActiveNav }) {
           <Typography className="sectionHeader">VALUES</Typography>
           <Box className="benefitCardBox">
             {BenefitCard({
-              icon: bnfIcon1,
+              img: card1,
               title: "Customizable AI Models",
               summery:
                 "Our Gen AI tool can be customized to align with your industry-specific requirements, ensuring it delivers maximum value and efficiency",
             })}
             {BenefitCard({
-              icon: bnfIcon2,
+              img: card2,
               title: "Advanced Predictive Analytics",
               summery:
                 "Leverage our AI's powerful predictive capabilities to anticipate market trends, optimize operations, and drive strategic decisions.",
             })}
             {BenefitCard({
-              icon: bnfIcon3,
+              img: card3,
               title: "Expertise in AI Customization",
               summery:
                 "Our team of AI experts specializes in creating customized solutions that align perfectly with your specific needs and goals.",
             })}
             {BenefitCard({
-              icon: bnfIcon4,
+              img: card4,
               title: "Commitment to Security",
               summery:
                 "We prioritize the security and privacy of your data, ensuring that our solutions comply with the highest standards and regulatory requirements.",

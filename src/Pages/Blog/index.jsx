@@ -1,6 +1,7 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./style.css";
 import { useNavigate } from "react-router-dom"
+import Axios from "axios"
 
 //components
 import { Box, Typography, Button } from "@mui/material";
@@ -15,24 +16,46 @@ import blogBimg2 from "../../Assets/Images/blogBimg2.png";
 import calenderIcon from "../../Assets/Images/calenderIcon.png";
 import blogLastBg from "../../Assets/Images/blogLastBg.png";
 
-import { BlogData } from "../../Assets/Data";
+// import { BlogData } from "../../Assets/Data";
 
 const itemsPerPage = 6;
 export default function Blog({ activeNav, setActiveNav }) {
   const Navigate = useNavigate()
+  const [blogData, setBlogData] = useState([])
+
+
+  useEffect(() => {
+    if (!blogData.length) {
+      Axios.get("http://localhost:4000/api/blogs").then((response) => {
+        const parsedData = typeof response?.data === 'string' ? JSON.parse(response?.data) : response?.data;
+        setBlogData(parsedData)
+      }).catch((er) => {
+        console.log(er);
+      })
+    }
+  })
+
+
   setActiveNav(3);
   const [currentPage, setCurrentPage] = useState(1);
-  const totalPages = Math.ceil(BlogData.length / itemsPerPage);
+  const totalPages = Math.ceil(blogData.length / itemsPerPage);
 
   const handleClick = (page) => {
     setCurrentPage(page);
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
-  const currentData = BlogData.slice(
+  const currentData = blogData.slice(
     (currentPage - 1) * itemsPerPage,
     currentPage * itemsPerPage
   );
+
+
+  const storeBlogIndex = (i) => {
+    localStorage.setItem("blogIndex", i)
+    Navigate("/Blog-details")
+  }
+
 
   const BlogBCard = ({ img, title, subtitle }) => {
     return (
@@ -58,9 +81,13 @@ export default function Blog({ activeNav, setActiveNav }) {
     );
   };
 
-  const blogCard = ({ img, title, subtitle, key }) => {
+  const blogCard = ({ img, title, subtitle, key, id }) => {
     return (
-      <Box onClick={() => Navigate("/blog-details")} className="blogCard" key={key}>
+      <Box onClick={() => {
+        Navigate("/blog-details")
+        storeBlogIndex(id)
+        window.scrollTo({ top: 0, behavior: "smooth" })
+      }} className="blogCard" key={key}>
         <img src={img} />
         <Box className="blogBCardTextSection">
           <Box className="CSUInfoBox">
@@ -118,6 +145,7 @@ export default function Blog({ activeNav, setActiveNav }) {
                 title: el.title,
                 subtitle: el.subTitle,
                 key: i,
+                id: el.id
               })
             )}
           </Box>
