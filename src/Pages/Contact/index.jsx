@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./style.css";
 
 //components
@@ -15,8 +15,12 @@ import addressIcon from "../../Assets/Images/icon-address.svg";
 import phoneIcon from "../../Assets/Images/icon-phone.svg";
 import emailIcon from "../../Assets/Images/icon-email.svg";
 import mapImg from "../../Assets/Images/map.png";
+import DropIcon from "../../Assets/Images/dropIcon.png"
 
 export default function Contact({ activeNav, setActiveNav }) {
+  const [interestDrop, setInterestDrop] = useState(false)
+  const [interestDropVal, setInterestDropVal] = useState("For Size of the company")
+
   return (
     <>
       <Box className="contactPage">
@@ -110,10 +114,29 @@ export default function Contact({ activeNav, setActiveNav }) {
 
             <Box className="inputWl">
               <Typography>Interest in</Typography>
-              <Box className="inputBox">
-                <select name="" id="">
-                  <option value="">Developement</option>
-                </select>
+              <Box className="inputBox dropBox">
+                {/* <select name="" id="">
+                  <option className="interestDrop" value="">For Size of the company</option>
+                  <option className="interestDrop" value="">Turnover and intrest in</option>
+                </select> */}
+                <img className="dropIcon" src={DropIcon} onClick={() => setInterestDrop(!interestDrop)} />
+                <Typography>{interestDropVal}</Typography>
+
+                <div className="DropMainBox" style={{ display: interestDrop ? "flex" : "none" }}>
+                  <div className="DropItem" onClick={() => {
+                    setInterestDrop(!interestDrop)
+                    setInterestDropVal("For Size of the company")
+                  }}>
+                    <p>For Size of the company</p>
+                  </div>
+                  <div className="DropItem" onClick={() => {
+                    setInterestDrop(!interestDrop)
+                    setInterestDropVal("Turnover and intrest in")
+                  }}>
+                    <p>Turnover and intrest in</p>
+                  </div>
+                </div>
+
               </Box>
             </Box>
 
