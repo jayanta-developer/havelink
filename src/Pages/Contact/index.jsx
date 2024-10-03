@@ -20,6 +20,49 @@ import DropIcon from "../../Assets/Images/dropIcon.png"
 export default function Contact({ activeNav, setActiveNav }) {
   const [interestDrop, setInterestDrop] = useState(false)
   const [interestDropVal, setInterestDropVal] = useState("For Size of the company")
+  const [formValue, setFormValue] = useState();
+  const [emailError, setEmailError] = useState('');
+
+  const restrictedDomains = [
+    'gmail.com',
+    'yahoo.com',
+    'outlook.com',
+    'hotmail.com',
+    'gmail.fr',
+    // Add more public domains if needed
+  ];
+
+  const validateEmail = (email) => {
+    const domain = email.split('@')[1];
+
+    // Check if the domain is in the restricted list
+    if (restrictedDomains.includes(domain)) {
+      return false;
+    }
+
+    const companyEmailPattern = /^[a-zA-Z0-9._%+-]+@(?!gmail\.com|yahoo\.com|outlook\.com)[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+    return companyEmailPattern.test(email);
+  };
+
+  const handelInputChange = (e) => {
+    const { name, value } = e.target;
+
+    if (name === 'email') {
+      if (!validateEmail(value)) {
+        setEmailError('Please enter a valid company email (e.g., name@company.com).');
+      } else {
+        setEmailError('');
+      }
+    }
+
+    setFormValue({
+      ...formValue,
+      [name]: value
+    });
+  };
+
+
+  console.log(formValue);
 
   return (
     <>
@@ -66,7 +109,7 @@ export default function Contact({ activeNav, setActiveNav }) {
               <Box className="inputWl">
                 <Typography>First Name</Typography>
                 <Box className="inputBox">
-                  <input type="text" placeholder="First Name" />
+                  <input name="FirstName" type="text" placeholder="First Name" onChange={handelInputChange} />
                   <img src={userIcon} />
                 </Box>
               </Box>
@@ -74,7 +117,7 @@ export default function Contact({ activeNav, setActiveNav }) {
               <Box className="inputWl">
                 <Typography>Last Name</Typography>
                 <Box className="inputBox">
-                  <input type="text" placeholder="Last Name" />
+                  <input name="lastName" type="text" placeholder="Last Name" onChange={handelInputChange} />
                   <img src={userIcon} />
                 </Box>
               </Box>
@@ -83,7 +126,7 @@ export default function Contact({ activeNav, setActiveNav }) {
             <Box className="inputWl">
               <Typography>Company</Typography>
               <Box className="inputBox">
-                <input type="text" placeholder="Company" />
+                <input name="company" type="text" placeholder="Company" onChange={handelInputChange} />
                 <img src={textIcon} />
               </Box>
             </Box>
@@ -92,14 +135,14 @@ export default function Contact({ activeNav, setActiveNav }) {
               <Box className="inputWl">
                 <Typography>Size of the Company</Typography>
                 <Box className="inputBox left-20">
-                  <input type="text" placeholder="Size of the Company" />
+                  <input name="CompanySize" type="text" placeholder="Size of the Company" onChange={handelInputChange} />
                 </Box>
               </Box>
 
               <Box className="inputWl">
                 <Typography>Turnover of the company</Typography>
                 <Box className="inputBox left-20">
-                  <input type="text" placeholder="Turnover of the company" />
+                  <input name="TurnoverCompany" type="text" placeholder="Turnover of the company" onChange={handelInputChange} />
                 </Box>
               </Box>
             </Box>
@@ -107,9 +150,10 @@ export default function Contact({ activeNav, setActiveNav }) {
             <Box className="inputWl">
               <Typography>Email</Typography>
               <Box className="inputBox">
-                <input type="text" placeholder="Mail" />
+                <input name="email" type="text" placeholder="Mail" onChange={handelInputChange} />
                 <img src={mailIcom} />
               </Box>
+              {emailError && <p style={{ color: 'red' }}>{emailError}</p>}
             </Box>
 
             <Box className="inputWl">
@@ -120,7 +164,7 @@ export default function Contact({ activeNav, setActiveNav }) {
                   <option className="interestDrop" value="">Turnover and intrest in</option>
                 </select> */}
                 <img className="dropIcon" src={DropIcon} onClick={() => setInterestDrop(!interestDrop)} />
-                <Typography>{interestDropVal}</Typography>
+                <span>{interestDropVal}</span>
 
                 <div className="DropMainBox" style={{ display: interestDrop ? "flex" : "none" }}>
                   <div className="DropItem" onClick={() => {
@@ -143,7 +187,7 @@ export default function Contact({ activeNav, setActiveNav }) {
             <Box className="inputWl messageBox">
               <Typography>Message</Typography>
               <Box className="inputBox">
-                <textarea />
+                <textarea name="message" onChange={handelInputChange} />
               </Box>
             </Box>
 

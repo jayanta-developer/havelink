@@ -25,6 +25,7 @@
   width: 100%;
   position: absolute;
   top: 45px;
+  opacity: 0.7;
 }
 
 .heroHeader1 {
@@ -105,7 +106,7 @@
 .HeroBtn p {
   font-size: 16px !important;
   font-weight: 700 !important;
-  color: #fff;
+  color: #061718;
   z-index: 1;
 }
 
