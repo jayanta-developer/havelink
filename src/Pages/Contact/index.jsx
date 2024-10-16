@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./style.css";
+import axios from 'axios';
 
 //components
 import { Box, Typography } from "@mui/material";
@@ -20,6 +21,33 @@ import DropIcon from "../../Assets/Images/dropIcon.png"
 export default function Contact({ activeNav, setActiveNav }) {
   const [interestDrop, setInterestDrop] = useState(false)
   const [interestDropVal, setInterestDropVal] = useState("For Size of the company")
+
+  const [responseMessage, setResponseMessage] = useState('');
+  const [formData, setFormData] = useState({
+    to: '',
+    subject: '',
+    text: '',
+    html: '',
+  });
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({
+      ...formData,
+      [name]: value,
+    });
+  };
+
+
+  const handleSubmit = async () => {
+    try {
+      const response = await axios.post('http://localhost:3001/send-email', formData);
+      setResponseMessage(response.data.message);
+    } catch (error) {
+      setResponseMessage('Failed to send email.');
+      console.error('Error sending email:', error);
+    }
+  };
 
   return (
     <>
