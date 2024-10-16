@@ -89,7 +89,7 @@ export default function About({ activeNav, setActiveNav }) {
         <NavBar activeNav={activeNav} setActiveNav={setActiveNav} />
 
         <Box className="whoWeareSection">
-          <Typography className="sectionHeader">WHO WE ARE</Typography>
+          <Typography className="sectionHeader">Who we are</Typography>
           <Typography className="nSummeryText2">
             Unleash Your Productivity Creativity Potential Business
           </Typography>
