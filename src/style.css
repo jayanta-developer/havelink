@@ -3,6 +3,14 @@
   src: url("./Assets/Fonts/creato_display/CreatoDisplay-Regular.otf")
     format("truetype");
 }
+@font-face {
+  font-family: "Ubuntu";
+  src: url("./Assets/Fonts/Ubuntu/Ubuntu-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "UbuntuBold";
+  src: url("./Assets/Fonts/Ubuntu/Ubuntu-Bold.ttf") format("truetype");
+}
 
 @font-face {
   font-family: "Archivo";

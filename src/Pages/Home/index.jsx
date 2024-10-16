@@ -6,6 +6,7 @@ import { Box, Typography } from "@mui/material";
 import NavBar from "../../Components/NavBar";
 import Footer from "../../Components/Footer";
 import { BenefitCard } from "../../Components/Util";
+import ReactPlayer from "react-player";
 
 //images
 import brainImg from "../../Assets/Images/brainImg.png";
@@ -39,6 +40,7 @@ import card1 from "../../Assets/Images/Card1.svg"
 import card2 from "../../Assets/Images/Card2.svg"
 import card3 from "../../Assets/Images/cardB3.svg"
 import card4 from "../../Assets/Images/card3.svg"
+import aiSectionCardLogo from "../../Assets/Images/aiSectionCardLogo.svg"
 
 export default function Home({ activeNav, setActiveNav }) {
   setActiveNav(0);
@@ -73,6 +75,35 @@ export default function Home({ activeNav, setActiveNav }) {
     );
   };
 
+  const AiSectionCard = ({ Rmargin, Lmargin }) => {
+    return (
+      <Box className={`CAiModelBox  ${Lmargin} ${Rmargin}`}>
+        <Box className="aiCardImgBox">
+          <img src={aiSectionCardLogo} />
+        </Box>
+        <Box className="aiTextB">
+          <Typography className="aiCardHeader">
+            EVA Lite
+          </Typography>
+          <Typography className="nSummeryText">
+            All-in-one AI-driven platform to streamline and enhance business operations for mid-sized companies.
+          </Typography>
+          <div className="HomeBtnBox">
+            <Box className="HeroBtn">
+              <Typography>Try it now</Typography>
+            </Box>
+            <Box className="WhiteBtn">
+              <Typography>See more</Typography>
+            </Box>
+          </div>
+        </Box>
+
+        {/* <img src={leftBtn} />
+              <img src={rightBtn} /> */}
+      </Box>
+    )
+  }
+
   return (
     <>
       <Box className="homeContainer">
@@ -80,105 +111,36 @@ export default function Home({ activeNav, setActiveNav }) {
         <Box className="heroSection">
           <img src={brainImg} className="brainImg" />
 
-          <Typography className="heroHeader1">
-            Unleash Your Productivity Creativity Potential Business
+          <Typography className="heroHeader1">Your link to AI</Typography>
+          <Typography className="heroHeader2">Unleash your business potential
+            <span className="heroHeader3"> with HaveLink </span>
           </Typography>
-          <Typography className="heroHeader2">
-            Unleash your creative potential
-          </Typography>
-          <Typography className="heroHeader3">with HaveLink</Typography>
 
           <Box className="HomelineBox">
-            <Box className="HeroBtn">
-              <Typography>Get Your Personalized Solution !</Typography>
-            </Box>
+            <div className="HomeBtnBox">
+              <Box className="HeroBtn">
+                <Typography>Try it now</Typography>
+              </Box>
+              <Box className="WhiteBtn">
+                <Typography>Free demo</Typography>
+              </Box>
+            </div>
+
             <img src={HomeLine} className="homeLineImg" />
           </Box>
-        </Box>
-
-        {/*ai section  */}
-
-        <Box className="aiSection">
-          <img src={aisoliotionBg} className="aisoliotionBg" />
-          <Typography className="sectionHeader">AI Solutions</Typography>
-          <Typography className="nSummeryText">
-            Videtics propose une suite logicielle qui facilite la surveillance
-            des zones protégées, l'investigation à postériori et la prise de
-            décision en utilisant les caméras IP existantes de votre parc vidéo.
-          </Typography>
-
-          <Box className="CAiModelBox">
-            <Box className="aiCardImgBox">
-              <img src={AiCardImg} />
-            </Box>
-            <Box className="aiTextB">
-              <Typography className="aiCardHeader">
-                Customizable AI Models
-              </Typography>
-              <Typography className="nSummeryText">
-                Videtics propose une suite logicielle qui facilite la
-                surveillance des zones protégées, l'investigation à postériori
-                et la prise de décision en utilisant les caméras IP existantes
-                de votre parc vidéo.
-              </Typography>
-              <Box className="HeroBtn">
-                <Typography>Get Your Personalized Solution !</Typography>
-              </Box>
-            </Box>
-
-            <Box className="CaMBtnBox">
-              <img src={leftBtn} />
-              <img src={rightBtn} />
-            </Box>
+          <Box className="videoBox">
+            <ReactPlayer
+              url="https://www.youtube.com/watch?v=63yr9dlI0cU"
+              loop
+            />
           </Box>
-          <img src={homeLineCenter} className="homeLineCenterImg" />
-          <img src={sideLine} className="leftSideLine" />
-          <img src={sideLine} className="rightSideLine" />
         </Box>
 
-        {/* benefits section */}
-        <Box className="benefitSection">
-          <img src={benefitBg} className="valueBg" />
-          <Typography className="sectionHeader">Our Benefits</Typography>
-          <Typography className="nSummeryText">
-            Videtics propose une suite logicielle qui facilite la surveillance
-            des zones protégées, l'investigation à postériori et la prise de
-            décision en utilisant les caméras IP existantes de votre parc vidéo.
-          </Typography>
 
-          <Box className="benefitCardBox">
-            {BenefitCard({
-              img: card1,
-              title: "Customizable AI Models",
-              summery:
-                "Our Gen AI tool can be customized to align with your industry-specific requirements, ensuring it delivers maximum value and efficiency",
-            })}
-            {BenefitCard({
-              img: card2,
-              title: "Advanced Predictive Analytics",
-              summery:
-                "Leverage our AI's powerful predictive capabilities to anticipate market trends, optimize operations, and drive strategic decisions.",
-            })}
-            {BenefitCard({
-              img: card3,
-              title: "Expertise in AI Customization",
-              summery:
-                "Our team of AI experts specializes in creating customized solutions that align perfectly with your specific needs and goals.",
-            })}
-            {BenefitCard({
-              img: card4,
-              title: "Commitment to Security",
-              summery:
-                "We prioritize the security and privacy of your data, ensuring that our solutions comply with the highest standards and regulatory requirements.",
-            })}
-          </Box>
-          <img src={sideLine} className="leftSideLine" />
-          <img src={earthInHand} className="earthInHand" />
-          {/* <img src={sideLine} className='rightSideLine' /> */}
-        </Box>
+
 
         {/*Client testimonials  */}
-        <Box className="testimonialSection">
+        {/* <Box className="testimonialSection">
           <img src={testimoni} className="testimoni" />
           <Typography className="sectionHeader">Client Testimonials</Typography>
           <Box className="testMonBox">
@@ -211,10 +173,10 @@ export default function Home({ activeNav, setActiveNav }) {
             </Box>
           </Box>
           <img src={sideLine} className="rightSideLine" />
-        </Box>
+        </Box> */}
 
         {/* case studies */}
-
+        {/* 
         <Box className="caseSection">
           <img src={studiesBg} className="studiesBg" />
           <Typography className="sectionHeader">Case studies</Typography>
@@ -224,6 +186,97 @@ export default function Home({ activeNav, setActiveNav }) {
             {CaseCard({ BgImg: caseImg3 })}
             {CaseCard({ BgImg: caseImg4 })}
           </Box>
+        </Box> */}
+
+        {/* your benefits section */}
+
+        <div className="benefitsV1">
+          <Typography className="sectionHeader">Your Benefits</Typography>
+          <Typography className="nSummeryText">Videtics propose une suite logicielle qui facilite la surveillance des zones protégées, l'investigation à postériori et la prise de décision en utilisant les caméras IP existantes de votre parc vidéo.</Typography>
+
+          <div className="moreESBox">
+            <div className="moreESBoxItem">
+              <p className="mesHeader">57%</p>
+              <p className="mesHeader1">More Efficient <br /> <samp>Videtics propose une suite logicielle qui facilite la surveillance des zones protégées, l'investigation.</samp></p>
+            </div>
+
+            <div className="moreESBoxItem">
+              <p className="mesHeader">57%</p>
+              <p className="mesHeader1">More Secure <br /> <samp>Videtics propose une suite logicielle qui facilite la surveillance des zones protégées, l'investigation.</samp></p>
+            </div>
+          </div>
+
+          <div className="moreESBottomBox">
+
+            <div className="moreESBItem">
+              <p className="mesHeader1">Affordable  <br /> <samp>Videtics propose une suite logicielle qui facilite la surveillance des zones protégées, l'investigation.</samp></p>
+            </div>
+            <div className="moreESBItem">
+              <p className="mesHeader1">Scalable <br /> <samp>Videtics propose une suite logicielle qui facilite la surveillance des zones protégées, l'investigation.</samp></p>
+            </div>
+            <div className="moreESBItem">
+              <p className="mesHeader1">Easy-to-Use <br /> <samp>Videtics propose une suite logicielle qui facilite la surveillance des zones protégées, l'investigation.</samp></p>
+            </div>
+
+          </div>
+        </div>
+
+
+        {/*ai section  */}
+
+        <Box className="aiSection">
+          <img src={aisoliotionBg} className="aisoliotionBg" />
+          <Typography className="sectionHeader">Our AI Solutions</Typography>
+          <Typography className="nSummeryText">
+            Videtics propose une suite logicielle qui facilite la surveillance des zones protégées, l'investigation à postériori et la prise de décision en utilisant les caméras IP existantes de votre parc vidéo.
+          </Typography>
+          <div className="aiSectionSlideBox">
+            <AiSectionCard Lmargin="Lmargin" />
+            <AiSectionCard />
+            <AiSectionCard Rmargin="Rmargin" />
+          </div>
+          <img src={sideLine} className="leftSideLine" />
+          <img src={sideLine} className="rightSideLine" />
+        </Box>
+
+
+
+        {/* benefits section */}
+        <Box className="benefitSection">
+          <img src={benefitBg} className="valueBg" />
+          <Typography className="sectionHeader">Our Services</Typography>
+          <Typography className="nSummeryText">
+            Videtics propose une suite logicielle qui facilite la surveillance des zones protégées, l'investigation à postériori et la prise de décision en utilisant les caméras IP existantes de votre parc vidéo.
+          </Typography>
+
+          <Box className="benefitCardBox">
+            {BenefitCard({
+              img: card1,
+              title: "Customizable AI Models",
+              summery:
+                "Our Gen AI tool can be customized to align with your industry-specific requirements, ensuring it delivers maximum value and efficiency",
+            })}
+            {BenefitCard({
+              img: card2,
+              title: "Advanced Predictive Analytics",
+              summery:
+                "Leverage our AI's powerful predictive capabilities to anticipate market trends, optimize operations, and drive strategic decisions.",
+            })}
+            {BenefitCard({
+              img: card3,
+              title: "Expertise in AI Customization",
+              summery:
+                "Our team of AI experts specializes in creating customized solutions that align perfectly with your specific needs and goals.",
+            })}
+            {BenefitCard({
+              img: card4,
+              title: "Commitment to Security",
+              summery:
+                "We prioritize the security and privacy of your data, ensuring that our solutions comply with the highest standards and regulatory requirements.",
+            })}
+          </Box>
+          <img src={sideLine} className="leftSideLine" />
+          <img src={earthInHand} className="earthInHand" />
         </Box>
 
         {/* contact section */}
