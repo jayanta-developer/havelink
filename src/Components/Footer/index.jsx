@@ -6,16 +6,16 @@ import { Box, Typography } from '@mui/material';
 
 //images
 import Clogo from "../../Assets/Images/Clogo.png";
-import footerClog1 from "../../Assets/Images/footerColo1.png";
-import footerClog2 from "../../Assets/Images/card4.svg";
-import footerClog3 from "../../Assets/Images/card5.svg";
-import footerClog4 from "../../Assets/Images/footerColo4.png";
 import facebookIcon from "../../Assets/Images/facebook-logo.png";
 import TwitterIcon from "../../Assets/Images/twitter.png";
 import LinkdinIcon from "../../Assets/Images/linkdin.png";
 import InstaIcon from "../../Assets/Images/instaIcon.png";
 import G_mailIcom from "../../Assets/Images/G_mailIcon.png";
 import footerBg from "../../Assets/Images/footerBg.png"
+import footerIcon1 from "../../Assets/Images/FooterBIcon1.svg"
+import footerIcon2 from "../../Assets/Images/FooterBIcon2.svg"
+import footerIcon3 from "../../Assets/Images/FooterBIcon3.svg"
+import footerIcon4 from "../../Assets/Images/FooterBIcon4.svg"
 
 export default function Footer() {
   return (
@@ -60,10 +60,10 @@ export default function Footer() {
 
         </Box>
         <Box className="footerBottom1Box">
-          <img src={footerClog1} />
-          <img src={footerClog2} />
-          <img src={footerClog3} />
-          <img src={footerClog4} />
+          <img src={footerIcon1} />
+          <img src={footerIcon2} />
+          <img src={footerIcon3} />
+          <img src={footerIcon4} />
         </Box>
         <Box className="footerBottomBox">
           <Typography className='footerNText'>Copyright © 2024 . All rights reserved</Typography>

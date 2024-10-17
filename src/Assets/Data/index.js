@@ -80,3 +80,60 @@ export const BlogData = [
       "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form.",
   },
 ];
+
+export const PriceTableData = [
+  {
+    title: "Members",
+    OnDemand: "1",
+    Basic: "Up to 3",
+    Pro: "Unlimited",
+  },
+  {
+    title: "Workspace roles",
+    OnDemand: "Admin only",
+    Basic: "Admin only",
+    Pro: "Admin & collaborator",
+  },
+  {
+    title: "Guests",
+    OnDemand: "",
+    Basic: "",
+    Pro: "true",
+  },
+  {
+    title: "Document summarization",
+    OnDemand: "",
+    Basic: "true",
+    Pro: "true",
+  },
+  {
+    title: "Offer comparison",
+    OnDemand: "",
+    Basic: "",
+    Pro: "true",
+  },
+  {
+    title: "Personalized email generation",
+    OnDemand: "",
+    Basic: "true",
+    Pro: "true",
+  },
+  {
+    title: "Contract analysis",
+    OnDemand: "",
+    Basic: "",
+    Pro: "true",
+  },
+  {
+    title: "Approval automation",
+    OnDemand: "",
+    Basic: "",
+    Pro: "true",
+  },
+  {
+    title: "Price (per month)",
+    OnDemand: "45€",
+    Basic: "29€",
+    Pro: "49€",
+  },
+];

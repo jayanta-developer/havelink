@@ -9,19 +9,7 @@ import { BenefitCard } from "../../Components/Util";
 import ReactPlayer from "react-player";
 
 //images
-import brainImg from "../../Assets/Images/brainImg.png";
 import HomeLine from "../../Assets/Images/Home_line.png";
-import homeLineCenter from "../../Assets/Images/Home_line_center.png";
-import AiCardImg from "../../Assets/Images/aiCardImg.png";
-import rightBtn from "../../Assets/Images/right (1) 2.png";
-import leftBtn from "../../Assets/Images/left (1) 1.png";
-import testoMoniBg from "../../Assets/Images/textominiBg.png";
-import start from "../../Assets/Images/start.png";
-import cote from "../../Assets/Images/cote.png";
-import caseImg1 from "../../Assets/Images/caseImg1.png";
-import caseImg2 from "../../Assets/Images/caseImg2.png";
-import caseImg3 from "../../Assets/Images/caseimg3.png";
-import caseImg4 from "../../Assets/Images/caseImg4.png";
 import Avatar from "../../Assets/Images/avatar.png";
 import calenderIcon from "../../Assets/Images/calenderIcon.png";
 import DGArrow from "../../Assets/Images/DGarrow.png";
@@ -30,17 +18,16 @@ import textIcon from "../../Assets/Images/textIcon.png";
 import mailIcom from "../../Assets/Images/mailIcon.png";
 import sideLine from "../../Assets/Images/sideLine.png";
 import earthInHand from "../../Assets/Images/earthInHandeImg.png";
-import valueBg from "../../Assets/Images/valueBg.png";
 import aisoliotionBg from "../../Assets/Images/aiSolutaionBg.png";
 import benefitBg from "../../Assets/Images/benefitBg.png";
-import testimoni from "../../Assets/Images/testimoBg.png";
-import studiesBg from "../../Assets/Images/studiesBg.png";
 import contactBg from "../../Assets/Images/contactBg.png";
 import card1 from "../../Assets/Images/Card1.svg"
 import card2 from "../../Assets/Images/Card2.svg"
 import card3 from "../../Assets/Images/cardB3.svg"
 import card4 from "../../Assets/Images/card3.svg"
+import card6 from "../../Assets/Images/card6.svg"
 import aiSectionCardLogo from "../../Assets/Images/aiSectionCardLogo.svg"
+import HomeCenterLine from "../../Assets/Images/Home_line_center.png"
 
 export default function Home({ activeNav, setActiveNav }) {
   setActiveNav(0);
@@ -109,7 +96,7 @@ export default function Home({ activeNav, setActiveNav }) {
       <Box className="homeContainer">
         <NavBar activeNav={activeNav} setActiveNav={setActiveNav} />
         <Box className="heroSection">
-          <img src={brainImg} className="brainImg" />
+          {/* <img src={brainImg} className="brainImg" /> */}
 
           <Typography className="heroHeader1">Your link to AI</Typography>
           <Typography className="heroHeader2">Unleash your business potential
@@ -191,6 +178,8 @@ export default function Home({ activeNav, setActiveNav }) {
         {/* your benefits section */}
 
         <div className="benefitsV1">
+          <img src={sideLine} className="leftSideLine" />
+
           <Typography className="sectionHeader">Your Benefits</Typography>
           <Typography className="nSummeryText">Videtics propose une suite logicielle qui facilite la surveillance des zones protégées, l'investigation à postériori et la prise de décision en utilisant les caméras IP existantes de votre parc vidéo.</Typography>
 
@@ -207,7 +196,6 @@ export default function Home({ activeNav, setActiveNav }) {
           </div>
 
           <div className="moreESBottomBox">
-
             <div className="moreESBItem">
               <p className="mesHeader1">Affordable  <br /> <samp>Videtics propose une suite logicielle qui facilite la surveillance des zones protégées, l'investigation.</samp></p>
             </div>
@@ -217,26 +205,32 @@ export default function Home({ activeNav, setActiveNav }) {
             <div className="moreESBItem">
               <p className="mesHeader1">Easy-to-Use <br /> <samp>Videtics propose une suite logicielle qui facilite la surveillance des zones protégées, l'investigation.</samp></p>
             </div>
-
           </div>
         </div>
 
 
         {/*ai section  */}
 
+        <div className="homeLineImgBox">
+          <img src={HomeCenterLine} className="HomeCenterLine" />
+          <img src={sideLine} className="rightSideLine" />
+        </div>
+
         <Box className="aiSection">
           <img src={aisoliotionBg} className="aisoliotionBg" />
           <Typography className="sectionHeader">Our AI Solutions</Typography>
-          <Typography className="nSummeryText">
-            Videtics propose une suite logicielle qui facilite la surveillance des zones protégées, l'investigation à postériori et la prise de décision en utilisant les caméras IP existantes de votre parc vidéo.
+          <Typography className="nSummeryText">Videtics propose une suite logicielle
+            qui facilite la surveillance des zones protégées,
+            l'investigation à postériori et la prise de décision
+            en utilisant les caméras IP existantes de votre parc vidéo.
           </Typography>
           <div className="aiSectionSlideBox">
             <AiSectionCard Lmargin="Lmargin" />
             <AiSectionCard />
             <AiSectionCard Rmargin="Rmargin" />
           </div>
-          <img src={sideLine} className="leftSideLine" />
-          <img src={sideLine} className="rightSideLine" />
+          {/* <img src={sideLine} className="leftSideLine" /> */}
+          {/* <img src={sideLine} className="rightSideLine" /> */}
         </Box>
 
 
@@ -251,26 +245,32 @@ export default function Home({ activeNav, setActiveNav }) {
 
           <Box className="benefitCardBox">
             {BenefitCard({
+              img: card3,
+              title: "Offer Comparison",
+              summery:
+                "Our team of AI experts specializes in creating customized solutions that align perfectly with your specific needs and goals.",
+            })}
+            {BenefitCard({
+              img: card6,
+              title: "Document Summarization",
+              summery:
+                "Our Gen AI tool can be customized to align with your industry-specific requirements, ensuring it delivers maximum value and efficiency",
+            })}
+            {BenefitCard({
               img: card1,
-              title: "Customizable AI Models",
+              title: "Personalized Email Generation",
               summery:
                 "Our Gen AI tool can be customized to align with your industry-specific requirements, ensuring it delivers maximum value and efficiency",
             })}
             {BenefitCard({
               img: card2,
-              title: "Advanced Predictive Analytics",
+              title: "Approval Automation",
               summery:
                 "Leverage our AI's powerful predictive capabilities to anticipate market trends, optimize operations, and drive strategic decisions.",
             })}
             {BenefitCard({
-              img: card3,
-              title: "Expertise in AI Customization",
-              summery:
-                "Our team of AI experts specializes in creating customized solutions that align perfectly with your specific needs and goals.",
-            })}
-            {BenefitCard({
               img: card4,
-              title: "Commitment to Security",
+              title: "Contract Analysis",
               summery:
                 "We prioritize the security and privacy of your data, ensuring that our solutions comply with the highest standards and regulatory requirements.",
             })}

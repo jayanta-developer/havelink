@@ -12,6 +12,10 @@ import solutionsIcon01 from "../../Assets/Images/solution-icon-01.svg";
 import solutionsIcon02 from "../../Assets/Images/solution-icon-02.svg";
 import solutionsIcon03 from "../../Assets/Images/solution-icon-03.svg";
 import solutionsImg01 from "../../Assets/Images/solution-img-01.png";
+import IIcon from '../../Assets/Images/IIcon.svg';
+import tikIcon from "../../Assets/Images/tikIcon.svg"
+
+import { PriceTableData } from "../../Assets/Data"
 
 export default function Solutions({ activeNav, setActiveNav }) {
   return (
@@ -35,40 +39,40 @@ export default function Solutions({ activeNav, setActiveNav }) {
             <figure>
               <img src={solutionsIcon01} />
             </figure>
-            <Typography variant="h3">Customizable AI Solutions</Typography>
+            <Typography variant="h3">On Demand</Typography>
             <Typography>
-              Videtics propose une suite logicielle qui facilite la surveillance
-              des zones protégées, l'investigation à postériori et la prise de
-              décision en utilisant les caméras IP existantes de votre parc
-              vidéo.
+              Videtics propose une suite logicielle qui facilite la surveillance des zones protégées, l'investigation à postériori et la prise de décision en utilisant les caméras IP existantes de votre parc vidéo.
             </Typography>
+            <Box className="WhiteBtn">
+              <Typography>See more</Typography>
+            </Box>
           </Box>
           <Box className="column">
             <figure>
               <img src={solutionsIcon02} />
             </figure>
-            <Typography variant="h3">Discover EVA Solution</Typography>
+            <Typography variant="h3">EVA Lite </Typography>
             <Typography>
-              Videtics propose une suite logicielle qui facilite la surveillance
-              des zones protégées, l'investigation à postériori et la prise de
-              décision en utilisant les caméras IP existantes de votre parc
-              vidéo.
+              Videtics propose une suite logicielle qui facilite la surveillance des zones protégées, l'investigation à postériori et la prise de décision en utilisant les caméras IP existantes de votre parc vidéo.
             </Typography>
+            <Box className="WhiteBtn">
+              <Typography>See more</Typography>
+            </Box>
           </Box>
           <Box className="column">
             <figure>
-              <img src={solutionsIcon03} />
+              <img src={solutionsIcon03} className="comingS" />
             </figure>
-            <Typography variant="h3">Discover EVA Lite Solution</Typography>
+            <Typography variant="h3">EVA </Typography>
             <Typography>
-              Videtics propose une suite logicielle qui facilite la surveillance
-              des zones protégées, l'investigation à postériori et la prise de
-              décision en utilisant les caméras IP existantes de votre parc
-              vidéo.
+              Videtics propose une suite logicielle qui facilite la surveillance des zones protégées, l'investigation à postériori et la prise de décision en utilisant les caméras IP existantes de votre parc vidéo.
             </Typography>
+            <Box className="WhiteBtn">
+              <Typography>COMING SOON</Typography>
+            </Box>
           </Box>
         </Box>
-        <Box className="solutionstwoSection">
+        {/* <Box className="solutionstwoSection">
           <figure>
             <img src={solutionsImg01} />
           </figure>
@@ -94,7 +98,60 @@ export default function Solutions({ activeNav, setActiveNav }) {
               non-characteristic words etc.
             </Typography>
           </article>
-        </Box>
+        </Box> */}
+
+        <p className="priceTableHeader">Pricing</p>
+
+        <div className="PriceTableBig">
+          <div className="priceTaleBorder">
+            <div className="PriceMainTable">
+              <div className="pTHeaderRow">
+                <div className="ptHCell">
+                  <p></p>
+                </div>
+                <div className="ptHCell ptCenter">
+                  <p>On Demand</p>
+                </div>
+                <div className="ptHCell ptCenter">
+                  <p>Basic</p>
+                </div>
+                <div className="ptHCell ptCenter">
+                  <p>Pro</p>
+                </div>
+              </div>
+
+              <div className="ptValueBox">
+                {
+                  PriceTableData?.map((el, i) => (
+                    <div key={i} className="pTHeaderRow">
+                      <div className="ptNCell">
+                        <p>{el.title} <img style={{ marginLeft: "10px" }} src={IIcon} /></p>
+                      </div>
+                      <div className="ptNCell ptCenter">
+                        <p>{el.OnDemand}</p>
+                      </div>
+                      <div className="ptNCell ptCenter">
+                        <p>{el.Basic === "true" ? <img src={tikIcon} /> : el.Basic}</p>
+                      </div>
+                      <div className="ptNCell ptCenter">
+                        <p>{el.Pro === "true" ? <img src={tikIcon} /> : el.Pro}</p>
+                      </div>
+                    </div>
+                  ))
+                }
+
+
+
+
+
+              </div>
+
+
+            </div>
+          </div>
+
+
+        </div>
 
         <Footer />
       </Box>

@@ -150,6 +150,9 @@ export default function NavBar({ activeNav, setActiveNav }) {
           >
             <Typography>Contact Us</Typography>
           </Box>
+          <Box className="navItem FdBtn">
+            <p>Free Demo</p>
+          </Box>
         </Box>
       </Box>
     </>

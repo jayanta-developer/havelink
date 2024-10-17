@@ -11,7 +11,7 @@ import { BenefitCard } from "../../Components/Util";
 import ReactPlayer from "react-player";
 
 //images
-import pageBg1 from "../../Assets/Images/aboutPageBG1.png";
+import pageBg1 from "../../Assets/Images/aboutPageBG1V1.png";
 import teamImg1 from "../../Assets/Images/teamImg1.png";
 import teamImg2 from "../../Assets/Images/teamImag2.png";
 import teamImg3 from "../../Assets/Images/teamImg3.png";
@@ -89,29 +89,14 @@ export default function About({ activeNav, setActiveNav }) {
         <NavBar activeNav={activeNav} setActiveNav={setActiveNav} />
 
         <Box className="whoWeareSection">
-          <Typography className="sectionHeader">Who we are</Typography>
-          <Typography className="nSummeryText2">
-            Unleash Your Productivity Creativity Potential Business
-          </Typography>
+          <Typography className="sectionHeader">Our Mission</Typography>
+          <Typography className="nSummeryText2">Unleash Your Productivity Creativity Potential Business</Typography>
           <Typography my={4} className="aboutNText">
-            UThere are many variations of passages of Lorem Ipsum available, but
-            the majority have suffered alteration in some form, by injected
-            humour, or randomised words which don't look even slightly
-            believable. If you are going to use a passage of Lorem Ipsum, you
-            need to be sure there isn't anything embarrassing hidden in the
-            middle of text. All the Lorem Ipsum generators on the Internet tend
-            to repeat predefined chunks as necessary, making this the first true
-            generator on the Internet.{" "}
-          </Typography>
-          <Typography className="aboutNText">
-            It uses a dictionary of over 200 Latin words, combined with a
-            handful of model sentence structures, to generate Lorem Ipsum which
-            looks reasonable. The generated Lorem Ipsum is therefore always free
-            from repetition, injected humour, or non-characteristic words etc.
+            It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.
           </Typography>
         </Box>
 
-        <Box className="ourStorySection">
+        {/* <Box className="ourStorySection">
           <img src={MeetBg} className="StoryBg" />
 
           <Typography className="sectionHeader">OUR STORY</Typography>
@@ -131,12 +116,12 @@ export default function About({ activeNav, setActiveNav }) {
             looks reasonable. The generated Lorem Ipsum is therefore always free
             from repetition, injected humour, or non-characteristic words etc.
           </Typography>
-        </Box>
+        </Box> */}
 
         {/* behind Team Section */}
         <Box className="behindTeamSection">
           <Typography className="sectionHeader">
-            MEET THE TEAM BEHIND HAVELINK
+            Meet The Team Behind Havelink
           </Typography>
           <Box className="teamCardBox">
             {TeamCard({
@@ -173,7 +158,7 @@ export default function About({ activeNav, setActiveNav }) {
         {/* Partners */}
         <Box className="partnerSection">
           <img src={partnarsBg} className="partnarsBg" />
-          <Typography className="sectionHeader">PARTNERS</Typography>
+          <Typography className="sectionHeader">Our Partners</Typography>
           <Box className="partnerCardBox">
             {partnerImg?.map((el, i) => (
               <Box key={i} className="partnerCard">
@@ -183,41 +168,11 @@ export default function About({ activeNav, setActiveNav }) {
           </Box>
         </Box>
 
-        {/* benefits section */}
-        <Box mb={5} className="benefitSection">
-          <img src={valueBg} className="valueBg" />
-          <Typography className="sectionHeader">VALUES</Typography>
-          <Box className="benefitCardBox">
-            {BenefitCard({
-              img: card1,
-              title: "Customizable AI Models",
-              summery:
-                "Our Gen AI tool can be customized to align with your industry-specific requirements, ensuring it delivers maximum value and efficiency",
-            })}
-            {BenefitCard({
-              img: card2,
-              title: "Advanced Predictive Analytics",
-              summery:
-                "Leverage our AI's powerful predictive capabilities to anticipate market trends, optimize operations, and drive strategic decisions.",
-            })}
-            {BenefitCard({
-              img: card3,
-              title: "Expertise in AI Customization",
-              summery:
-                "Our team of AI experts specializes in creating customized solutions that align perfectly with your specific needs and goals.",
-            })}
-            {BenefitCard({
-              img: card4,
-              title: "Commitment to Security",
-              summery:
-                "We prioritize the security and privacy of your data, ensuring that our solutions comply with the highest standards and regulatory requirements.",
-            })}
-          </Box>
-        </Box>
+
 
         {/* video section */}
 
-        <Box className="AboutVideoSection">
+        {/* <Box className="AboutVideoSection">
           <Typography className="sectionHeader">SEE OUT VIDEO</Typography>
           <Box className="videoBox">
             <ReactPlayer
@@ -228,7 +183,9 @@ export default function About({ activeNav, setActiveNav }) {
           <img src={earthInHand} className="earthInHandImg" />
           <img src={chainImg} className="chainImg" />
           <img src={handShakImgBg} className="handShakImgBg" />
-        </Box>
+        </Box> */}
+
+
         <Footer />
       </Box>
     </>

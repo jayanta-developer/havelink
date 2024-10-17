@@ -116,10 +116,8 @@ export default function Blog({ activeNav, setActiveNav }) {
         <img src={blogBg} className="blogBg" />
 
         <Box className="blogMainSection">
-          <Typography className="sectionHeader">Our latest blogs</Typography>
-          <Typography className="nSummeryText">
-            Unleash Your Productivity Creativity Potential Business
-          </Typography>
+          <Typography className="sectionHeader">Latest Blogs</Typography>
+
 
           <Box className="blogBcardBox">
             {BlogBCard({

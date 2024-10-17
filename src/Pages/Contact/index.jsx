@@ -12,6 +12,7 @@ import contactBanner from "../../Assets/Images/contactbanner.png";
 import userIcon from "../../Assets/Images/userIcon.png";
 import textIcon from "../../Assets/Images/textIcon.png";
 import mailIcom from "../../Assets/Images/mailIcon.png";
+import linkedin from "../../Assets/Images/linkedin-letters.svg"
 import addressIcon from "../../Assets/Images/icon-address.svg";
 import phoneIcon from "../../Assets/Images/icon-phone.svg";
 import emailIcon from "../../Assets/Images/icon-email.svg";
@@ -99,7 +100,7 @@ export default function Contact({ activeNav, setActiveNav }) {
         <img src={contactBanner} className="contactBanner" />
 
         <Box className="contactMainSection">
-          <Typography className="sectionHeader">We're Here to Help</Typography>
+          <Typography className="sectionHeader">We Are Here For You</Typography>
           <Typography className="nSummeryText">
             Unleash Your Productivity Creativity Potential Business
           </Typography>
@@ -107,6 +108,15 @@ export default function Contact({ activeNav, setActiveNav }) {
 
         <Box className="contacSection">
           <Box className="contactTextBox">
+            <Box className="contactIfoBox">
+              <Box className="icon">
+                <img src={linkedin} />
+              </Box>
+              <Typography variant="h4">LinkedIn</Typography>
+              <Typography>
+                https://www.linkedin.com/company/<br />havelink/
+              </Typography>
+            </Box>
             <Box className="contactIfoBox">
               <Box className="icon">
                 <img src={addressIcon} />

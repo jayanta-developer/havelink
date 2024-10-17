@@ -44,7 +44,7 @@
 }
 
 .solutionsThreeSection .column {
-  padding: 50px;
+  padding: 20px;
   width: 33.333%;
   text-align: center;
   position: relative;
@@ -158,7 +158,93 @@
   color: #ffffff;
   margin-top: 1rem;
 }
-
+.comingS {
+  -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+  filter: grayscale(100%);
+}
+.solutionsThreeSection .WhiteBtn {
+  border: 1px solid #fff;
+  background: #00000000;
+  cursor: pointer;
+}
+.solutionsThreeSection .WhiteBtn p {
+  color: #fff;
+  margin: 0;
+}
+.priceTableHeader {
+  font-size: 60px;
+  font-weight: 700;
+  color: #fff;
+  font-family: "Ubuntu";
+  width: 100%;
+  text-align: center;
+}
+.PriceTableBig {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.priceTaleBorder {
+  width: 97%;
+  background: rgb(38, 130, 220);
+  background: linear-gradient(
+    0deg,
+    rgba(38, 130, 220, 1) 18%,
+    rgba(20, 219, 71, 1) 100%,
+    rgba(41, 105, 150, 1) 100%
+  );
+  border-radius: 27px;
+  padding: 2px;
+}
+.PriceMainTable {
+  width: 100%;
+  height: 100%;
+  border-radius: 27px;
+  background: #00141c;
+  padding: 20px 20px 10px 20px;
+  display: flex;
+  flex-direction: column;
+  overflow-y: scroll;
+}
+.pTHeaderRow {
+  min-width: 750px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.ptHCell {
+  width: 25%;
+}
+.ptHCell p {
+  font-size: 30px;
+  font-weight: 500;
+  color: #fff;
+}
+.ptValueBox {
+  min-width: 783px;
+  width: 100%;
+  background: #000;
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+  gap: 10px;
+}
+.pTHeaderRow {
+  width: 100%;
+}
+.ptNCell {
+  width: 25%;
+}
+.ptCenter {
+  display: flex;
+  justify-content: center;
+}
+.ptNCell p {
+  font-size: 14px;
+  color: #fff;
+}
 @media only screen and (max-width: 760px) {
   .solutionsMainSection {
     padding: 8% 5% 0 5%;
@@ -273,5 +359,19 @@
 
   .solutionstwoSection article {
     width: 50%;
+  }
+}
+
+/* Tabe view */
+@media only screen and (min-width: 768px) {
+  .priceTaleBorder {
+    width: 95%;
+  }
+}
+
+/* Desktop view */
+@media only screen and (min-width: 1000px) {
+  .priceTaleBorder {
+    width: 70%;
   }
 }

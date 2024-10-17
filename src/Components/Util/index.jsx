@@ -8,9 +8,6 @@ export const BenefitCard = ({ icon, title, summery, img }) => {
   return (
     <Box className="benefitCard">
       <img src={img} className='bnfBg' />
-      {/* <Box className="bnfCardLogoBox"> */}
-      {/* <img src={icon} /> */}
-      {/* </Box> */}
       <Typography>{title}</Typography>
       <span>{summery}</span>
     </Box>

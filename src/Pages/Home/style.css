@@ -33,17 +33,17 @@
 }
 
 .heroHeader2 {
-  width: 67%;
+  width: 95%;
   text-align: center;
   font-family: UbuntuBold !important;
-  font-size: 80px !important;
+  font-size: 45px !important;
   color: #fff;
-  line-height: 90px !important;
+  line-height: 65px !important;
 }
 
 .heroHeader3 {
   font-family: UbuntuBold !important;
-  font-size: 80px !important;
+  font-size: 44px !important;
   font-weight: 600 !important;
   background: -webkit-linear-gradient(#58f88c, #0082de);
   -webkit-background-clip: text;
@@ -52,7 +52,7 @@
 
 .HeroBtn {
   position: relative;
-  padding: 0 36px;
+  padding: 0 16px;
   height: 45px;
   border-radius: 38px;
   background: none;
@@ -118,6 +118,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-bottom: 42px;
+  margin-top: 17px;
 }
 
 .HomelineBox .homeLineImg {
@@ -129,7 +131,7 @@
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  gap: 40px;
+  gap: 20px;
 }
 .aiSection .HomeBtnBox {
   justify-content: start;
@@ -147,8 +149,8 @@
   color: #fff;
 }
 .WhiteBtn {
-  padding: 0 30px;
-  height: 58px;
+  padding: 0 16px;
+  height: 45px;
   border-radius: 38px;
   background: #fff;
   display: flex;
@@ -220,7 +222,7 @@
 }
 
 .CAiModelBox {
-  min-width: 70%;
+  min-width: 92%;
   border-radius: 16px;
   border: 1px solid #ffffff7d;
   margin-top: 50px;
@@ -241,7 +243,7 @@
   width: 100%;
 }
 .Lmargin {
-  margin-left: 124%;
+  margin-left: 4%;
 }
 .Rmargin {
   margin-right: 3%;
@@ -274,7 +276,7 @@
   width: 100%;
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: start;
   overflow: scroll;
   gap: 40px;
 }
@@ -292,8 +294,7 @@
 }
 
 .benefitSection .leftSideLine {
-  top: unset !important;
-  bottom: -165px !important;
+  top: 8px !important;
 }
 
 .benefitSection .rightSideLine {
@@ -310,12 +311,14 @@
 }
 .benefitCardBox {
   width: 100%;
+  height: 485px;
   display: flex;
   flex-direction: row;
   gap: 20px;
   margin-top: 35px;
   justify-content: start;
   overflow-y: scroll;
+  overflow-x: visible;
   padding: 0px 20px;
   padding-top: 50px;
   padding-bottom: 73px;
@@ -628,12 +631,11 @@
 
 .contacSection {
   width: 100%;
-  margin-top: 100px;
   display: flex;
   flex-direction: column;
   align-items: start;
   justify-content: center;
-  gap: 50px;
+  gap: 20px;
   padding-bottom: 50px;
   position: relative;
   padding: 0 10px;
@@ -767,18 +769,30 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 50px 0;
+  padding-top: 100px;
+  background: rgb(6, 59, 35);
+  background: linear-gradient(
+    0deg,
+    rgba(6, 59, 35, 0) 0%,
+    rgba(6, 45, 27, 0.4375) 35%,
+    rgb(0 43 14 / 51%) 100%
+  );
+  position: relative;
+}
+.benefitsV1 .leftSideLine {
+  top: 162px;
 }
 .moreESBox {
   width: 100%;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
   gap: 50px;
   margin-top: 65px;
+  padding: 0 10px;
 }
 .moreESBoxItem {
-  width: 400px;
+  width: 100%;
   display: flex;
   flex-direction: row;
   gap: 20px;
@@ -799,20 +813,33 @@
   font-size: 18px;
   color: #fff;
   font-weight: 300;
+  line-height: 10px;
 }
 .moreESBottomBox {
   width: 100%;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
   gap: 30px;
   margin-top: 37px;
   -webkit-backdrop-filter: blur(8px);
   backdrop-filter: blur(8px);
-  padding: 30px 0;
+  padding: 30px 10px;
 }
 .moreESBItem {
-  width: 258px;
+  width: 100%;
+}
+.homeLineImgBox {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+.homeLineImgBox .rightSideLine {
+  top: 0px;
+}
+.homeLineImgBox .HomeCenterLine {
+  width: 70%;
 }
 /* Tabe view */
 @media only screen and (min-width: 768px) {
@@ -822,6 +849,7 @@
 
   .heroHeader2 {
     font-size: 70px !important;
+    line-height: 90px !important;
   }
 
   .heroHeader3 {
@@ -829,6 +857,7 @@
   }
 
   .CAiModelBox {
+    min-width: 85%;
     flex-direction: row;
     padding: 0 46px;
     height: 400px;
@@ -913,7 +942,7 @@
   }
 
   .contacSection .leftSideLine {
-    top: 130px;
+    display: none;
   }
 
   .HeroBtn p {
@@ -921,6 +950,42 @@
   }
   .contacSection {
     padding: 20px;
+    gap: 20px;
+  }
+  .benefitsV1 {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .mesHeader1 {
+    font-size: 25px;
+  }
+  .mesHeader {
+    font-size: 50px;
+  }
+  .homeLineImgBox .HomeCenterLine {
+    width: 50%;
+  }
+  .Lmargin {
+    margin-left: 18px;
+  }
+  .WhiteBtn p {
+    font-size: 16px !important;
+  }
+  .moreESBox {
+    flex-direction: row;
+  }
+  .moreESBoxItem {
+    width: 400px;
+  }
+  .moreESBottomBox {
+    flex-direction: row;
+    padding: 30px 0px;
+  }
+  .moreESBItem {
+    width: 258px;
+  }
+  .WhiteBtn {
+    height: 58px;
   }
 }
 
@@ -929,8 +994,7 @@
   .benefitCardBox {
     padding: 0;
     padding-top: 50px;
-    justify-content: center;
-    overflow: visible;
+    justify-content: start;
     padding-bottom: 0;
   }
 
@@ -941,10 +1005,6 @@
   .nSummeryText {
     width: 60%;
     font-size: 18px !important;
-  }
-
-  .CAiModelBox {
-    width: 70%;
   }
 
   .aiCardHeader {
@@ -969,6 +1029,8 @@
     align-items: start;
     margin-bottom: 60px;
     padding-top: 40px;
+    margin-top: 100px;
+    gap: 50px;
   }
 
   .contactTextBox {
@@ -980,7 +1042,8 @@
   }
 
   .contacSection .leftSideLine {
-    top: 570px;
+    display: block;
+    top: 385px;
   }
 
   .heroHeader1 {
@@ -988,6 +1051,42 @@
   }
 
   .benefitCard {
-    min-width: 255px;
+    min-width: 277px;
+  }
+  .heroHeader2 {
+    width: 67%;
+  }
+  .benefitsV1 {
+    padding: 0;
+  }
+  .mesHeader1 {
+    font-size: 36px;
+  }
+  .mesHeader {
+    font-size: 67px;
+  }
+  .homeLineImgBox .HomeCenterLine {
+    width: unset;
+  }
+  .Lmargin {
+    margin-left: 124%;
+  }
+  .CAiModelBox {
+    min-width: 70%;
+  }
+  .aiSectionSlideBox {
+    justify-content: center;
+  }
+  .HomeBtnBox {
+    gap: 40px;
+  }
+  .WhiteBtn p {
+    font-size: 20px !important;
+  }
+  .HeroBtn {
+    padding: 0 36px;
+  }
+  .WhiteBtn {
+    padding: 0 30px;
   }
 }
