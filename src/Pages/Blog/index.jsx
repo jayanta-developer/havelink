@@ -113,7 +113,7 @@ export default function Blog({ activeNav, setActiveNav }) {
     <>
       <Box className="blogPage">
         <NavBar activeNav={activeNav} setActiveNav={setActiveNav} />
-        <img src={blogBg} className="blogBg" />
+        {/* <img src={blogBg} className="blogBg" /> */}
 
         <Box className="blogMainSection">
           <Typography className="sectionHeader">Latest Blogs</Typography>
@@ -163,7 +163,7 @@ export default function Blog({ activeNav, setActiveNav }) {
               </Box>
             ))}
           </Box>
-          <img src={blogLastBg} className="blogLastBg" />
+          {/* <img src={blogLastBg} className="blogLastBg" /> */}
         </Box>
         <Footer />
       </Box>

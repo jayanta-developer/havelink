@@ -79,7 +79,7 @@ export default function BlogDetail({ activeNav, setActiveNav }) {
     <>
       <Box className="blogPage blogDetailPage">
         <NavBar activeNav={activeNav} setActiveNav={setActiveNav} />
-        <img src={blogBg} className="blogBg" />
+        {/* <img src={blogBg} className="blogBg" /> */}
 
         <Box className="blogMainSection">
 

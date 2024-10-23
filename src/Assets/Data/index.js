@@ -5,6 +5,12 @@ import blogimg4 from "../../Assets/Images/blogImg4.png";
 import blogimg5 from "../../Assets/Images/blogImg5.png";
 import blogimg6 from "../../Assets/Images/blogImg6.png";
 
+import card1 from "../../Assets/Images/Card1.svg";
+import card2 from "../../Assets/Images/Card2.svg";
+import card3 from "../../Assets/Images/cardB3.svg";
+import card4 from "../../Assets/Images/card3.svg";
+import card6 from "../../Assets/Images/card6.svg";
+
 export const Arrow = () => {
   return (
     <svg
@@ -135,5 +141,75 @@ export const PriceTableData = [
     OnDemand: "45€",
     Basic: "29€",
     Pro: "49€",
+  },
+];
+export const interestedList = [
+  "Career Growth Opportunities",
+  "Work-Life Balance",
+  "Company Culture",
+  "Compensation and Benefits",
+  "Job Security",
+  "Work Environment",
+];
+export const benefitCardsData = [
+  {
+    img: card3,
+    title: "Offer Comparison",
+    summery:
+      "Our team of AI experts specializes in creating customized solutions that align perfectly with your specific needs and goals.",
+  },
+  {
+    img: card6,
+    title: "Document Summarization",
+    summery:
+      "Our Gen AI tool can be customized to align with your industry-specific requirements, ensuring it delivers maximum value and efficiency.",
+  },
+  {
+    img: card1,
+    title: "Personalized Email Generation",
+    summery:
+      "Our Gen AI tool can be customized to align with your industry-specific requirements, ensuring it delivers maximum value and efficiency.",
+  },
+  {
+    img: card2,
+    title: "Approval Automation",
+    summery:
+      "Leverage our AI's powerful predictive capabilities to anticipate market trends, optimize operations, and drive strategic decisions.",
+  },
+  {
+    img: card4,
+    title: "Contract Analysis",
+    summery:
+      "We prioritize the security and privacy of your data, ensuring that our solutions comply with the highest standards and regulatory requirements.",
+  },
+  {
+    img: card3,
+    title: "Offer Comparison",
+    summery:
+      "Our team of AI experts specializes in creating customized solutions that align perfectly with your specific needs and goals.",
+  },
+  {
+    img: card6,
+    title: "Document Summarization",
+    summery:
+      "Our Gen AI tool can be customized to align with your industry-specific requirements, ensuring it delivers maximum value and efficiency.",
+  },
+  {
+    img: card1,
+    title: "Personalized Email Generation",
+    summery:
+      "Our Gen AI tool can be customized to align with your industry-specific requirements, ensuring it delivers maximum value and efficiency.",
+  },
+  {
+    img: card2,
+    title: "Approval Automation",
+    summery:
+      "Leverage our AI's powerful predictive capabilities to anticipate market trends, optimize operations, and drive strategic decisions.",
+  },
+  {
+    img: card4,
+    title: "Contract Analysis",
+    summery:
+      "We prioritize the security and privacy of your data, ensuring that our solutions comply with the highest standards and regulatory requirements.",
   },
 ];

@@ -85,7 +85,7 @@ export default function About({ activeNav, setActiveNav }) {
   return (
     <>
       <Box className="aboutPage">
-        <img src={pageBg1} className="aboutFBg" />
+        {/* <img src={pageBg1} className="aboutFBg" /> */}
         <NavBar activeNav={activeNav} setActiveNav={setActiveNav} />
 
         <Box className="whoWeareSection">

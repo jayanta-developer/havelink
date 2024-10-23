@@ -22,7 +22,7 @@
 }
 
 .whoWeareSection .nSummeryText2 {
-  font-size: 18px !important;
+  font-size: 24px !important;
   color: #fff;
 }
 
@@ -38,7 +38,7 @@
 
 .aboutNText {
   width: 90%;
-  font-size: 16px !important;
+  font-size: 20px !important;
   color: #ffffff;
 }
 
@@ -398,7 +398,7 @@
   }
 
   .whoWeareSection .aboutNText {
-    width: 55%;
+    width: 85%;
   }
 
   .whoWeareSection {

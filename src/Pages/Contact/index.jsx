@@ -18,6 +18,8 @@ import phoneIcon from "../../Assets/Images/icon-phone.svg";
 import emailIcon from "../../Assets/Images/icon-email.svg";
 import mapImg from "../../Assets/Images/map.png";
 import DropIcon from "../../Assets/Images/dropIcon.png"
+//data
+import { interestedList } from "../../Assets/Data"
 
 export default function Contact({ activeNav, setActiveNav }) {
   const [interestDrop, setInterestDrop] = useState(false)
@@ -97,7 +99,7 @@ export default function Contact({ activeNav, setActiveNav }) {
     <>
       <Box className="contactPage">
         <NavBar activeNav={activeNav} setActiveNav={setActiveNav} />
-        <img src={contactBanner} className="contactBanner" />
+        {/* <img src={contactBanner} className="contactBanner" /> */}
 
         <Box className="contactMainSection">
           <Typography className="sectionHeader">We Are Here For You</Typography>
@@ -193,32 +195,23 @@ export default function Contact({ activeNav, setActiveNav }) {
               </Box>
               {emailError && <p style={{ color: 'red' }}>{emailError}</p>}
             </Box>
-
             <Box className="inputWl">
               <Typography>Interest in</Typography>
               <Box className="inputBox dropBox">
-                {/* <select name="" id="">
-                  <option className="interestDrop" value="">For Size of the company</option>
-                  <option className="interestDrop" value="">Turnover and intrest in</option>
-                </select> */}
                 <img className="dropIcon" src={DropIcon} onClick={() => setInterestDrop(!interestDrop)} />
                 <span>{interestDropVal}</span>
-
                 <div className="DropMainBox" style={{ display: interestDrop ? "flex" : "none" }}>
-                  <div className="DropItem" onClick={() => {
-                    setInterestDrop(!interestDrop)
-                    setInterestDropVal("For Size of the company")
-                  }}>
-                    <p>For Size of the company</p>
-                  </div>
-                  <div className="DropItem" onClick={() => {
-                    setInterestDrop(!interestDrop)
-                    setInterestDropVal("Turnover and intrest in")
-                  }}>
-                    <p>Turnover and intrest in</p>
-                  </div>
+                  {
+                    interestedList?.map((el, i) => (
+                      <div key={i} className="DropItem" onClick={() => {
+                        setInterestDrop(!interestDrop)
+                        setInterestDropVal(el)
+                      }}>
+                        <p>{el}</p>
+                      </div>
+                    ))
+                  }
                 </div>
-
               </Box>
             </Box>
 

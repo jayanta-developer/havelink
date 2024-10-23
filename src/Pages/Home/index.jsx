@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./style.css";
 
 //components
@@ -7,6 +7,9 @@ import NavBar from "../../Components/NavBar";
 import Footer from "../../Components/Footer";
 import { BenefitCard } from "../../Components/Util";
 import ReactPlayer from "react-player";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 //images
 import HomeLine from "../../Assets/Images/Home_line.png";
@@ -20,17 +23,18 @@ import sideLine from "../../Assets/Images/sideLine.png";
 import earthInHand from "../../Assets/Images/earthInHandeImg.png";
 import aisoliotionBg from "../../Assets/Images/aiSolutaionBg.png";
 import benefitBg from "../../Assets/Images/benefitBg.png";
-import contactBg from "../../Assets/Images/contactBg.png";
-import card1 from "../../Assets/Images/Card1.svg"
-import card2 from "../../Assets/Images/Card2.svg"
-import card3 from "../../Assets/Images/cardB3.svg"
-import card4 from "../../Assets/Images/card3.svg"
-import card6 from "../../Assets/Images/card6.svg"
-import aiSectionCardLogo from "../../Assets/Images/aiSectionCardLogo.svg"
-import HomeCenterLine from "../../Assets/Images/Home_line_center.png"
+import aiSectionCardLogo from "../../Assets/Images/aiSectionCardLogo.svg";
+import HomeCenterLine from "../../Assets/Images/Home_line_center.png";
+import DropIcon from "../../Assets/Images/dropIcon.png";
+
+
+//data
+import { interestedList, benefitCardsData } from "../../Assets/Data";
 
 export default function Home({ activeNav, setActiveNav }) {
   setActiveNav(0);
+  const [interestDrop, setInterestDrop] = useState(false)
+  const [interestDropVal, setInterestDropVal] = useState("For Size of the company")
 
   const CaseCard = ({ BgImg }) => {
     return (
@@ -84,20 +88,56 @@ export default function Home({ activeNav, setActiveNav }) {
             </Box>
           </div>
         </Box>
-
-        {/* <img src={leftBtn} />
-              <img src={rightBtn} /> */}
       </Box>
     )
   }
+
+  const BenefitCarousel = () => {
+    const settings = {
+      dots: false,
+      infinite: true,
+      speed: 500,
+      slidesToShow: 5,
+      slidesToScroll: 1,
+      responsive: [
+        {
+          breakpoint: 1024,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 1,
+          }
+        },
+        {
+          breakpoint: 600,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1
+          }
+        }
+      ]
+    };
+
+    return (
+      <div className="carousel-container">
+        <Slider {...settings}>
+          {benefitCardsData.map((card, index) => (
+            <BenefitCard
+              key={index}
+              img={card.img}
+              title={card.title}
+              summery={card.summery}
+            />
+          ))}
+        </Slider>
+      </div>
+    );
+  };
 
   return (
     <>
       <Box className="homeContainer">
         <NavBar activeNav={activeNav} setActiveNav={setActiveNav} />
         <Box className="heroSection">
-          {/* <img src={brainImg} className="brainImg" /> */}
-
           <Typography className="heroHeader1">Your link to AI</Typography>
           <Typography className="heroHeader2">Unleash your business potential
             <span className="heroHeader3"> with HaveLink </span>
@@ -127,6 +167,7 @@ export default function Home({ activeNav, setActiveNav }) {
 
 
         {/*Client testimonials  */}
+
         {/* <Box className="testimonialSection">
           <img src={testimoni} className="testimoni" />
           <Typography className="sectionHeader">Client Testimonials</Typography>
@@ -242,46 +283,17 @@ export default function Home({ activeNav, setActiveNav }) {
           <Typography className="nSummeryText">
             Videtics propose une suite logicielle qui facilite la surveillance des zones protégées, l'investigation à postériori et la prise de décision en utilisant les caméras IP existantes de votre parc vidéo.
           </Typography>
+          <div className="carosulBox">
+            <BenefitCarousel />
+          </div>
 
-          <Box className="benefitCardBox">
-            {BenefitCard({
-              img: card3,
-              title: "Offer Comparison",
-              summery:
-                "Our team of AI experts specializes in creating customized solutions that align perfectly with your specific needs and goals.",
-            })}
-            {BenefitCard({
-              img: card6,
-              title: "Document Summarization",
-              summery:
-                "Our Gen AI tool can be customized to align with your industry-specific requirements, ensuring it delivers maximum value and efficiency",
-            })}
-            {BenefitCard({
-              img: card1,
-              title: "Personalized Email Generation",
-              summery:
-                "Our Gen AI tool can be customized to align with your industry-specific requirements, ensuring it delivers maximum value and efficiency",
-            })}
-            {BenefitCard({
-              img: card2,
-              title: "Approval Automation",
-              summery:
-                "Leverage our AI's powerful predictive capabilities to anticipate market trends, optimize operations, and drive strategic decisions.",
-            })}
-            {BenefitCard({
-              img: card4,
-              title: "Contract Analysis",
-              summery:
-                "We prioritize the security and privacy of your data, ensuring that our solutions comply with the highest standards and regulatory requirements.",
-            })}
-          </Box>
           <img src={sideLine} className="leftSideLine" />
           <img src={earthInHand} className="earthInHand" />
         </Box>
 
         {/* contact section */}
         <Box className="contacSection">
-          <img src={contactBg} className="contactBg" />
+          {/* <img src={contactBg} className="contactBg" /> */}
 
           <Box className="contactTextBox">
             <Typography className="sectionHeader">
@@ -345,14 +357,25 @@ export default function Home({ activeNav, setActiveNav }) {
                 <img src={mailIcom} />
               </Box>
             </Box>
-
             <Box className="inputWl">
               <Typography>Interest in</Typography>
-              <Box className="inputBox">
-                <input type="text" placeholder="Developement" />
+              <Box className="inputBox dropBox">
+                <img className="dropIcon" src={DropIcon} onClick={() => setInterestDrop(!interestDrop)} />
+                <span>{interestDropVal}</span>
+                <div className="DropMainBox" style={{ display: interestDrop ? "flex" : "none" }}>
+                  {
+                    interestedList?.map((el, i) => (
+                      <div key={i} className="DropItem" onClick={() => {
+                        setInterestDrop(!interestDrop)
+                        setInterestDropVal(el)
+                      }}>
+                        <p>{el}</p>
+                      </div>
+                    ))
+                  }
+                </div>
               </Box>
             </Box>
-
             <Box className="inputWl messageBox">
               <Typography>Message</Typography>
               <Box className="inputBox">

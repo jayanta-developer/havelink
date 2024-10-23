@@ -22,7 +22,7 @@ export default function Solutions({ activeNav, setActiveNav }) {
     <>
       <Box className="solutionsPage">
         <NavBar activeNav={activeNav} setActiveNav={setActiveNav} />
-        <img src={solutionsBanner} className="solutionsBanner" />
+        {/* <img src={solutionsBanner} className="solutionsBanner" /> */}
 
         <Box className="solutionsMainSection">
           <Typography className="sectionHeader">Our AI Solutions</Typography>
