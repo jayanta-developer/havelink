@@ -116,8 +116,8 @@ export default function Contact({ activeNav, setActiveNav }) {
               </Box>
               <Typography variant="h4">LinkedIn</Typography>
               <Typography>
-                <a href="https://www.linkedin.com/company/havelink/"></a>
-                https://www.linkedin.com/company/<br />havelink/
+                <a className="linkdinLink" target="blank" href="https://www.linkedin.com/company/havelink/">
+                  https://www.linkedin.com/company/<br />havelink/</a>
               </Typography>
             </Box>
             <Box className="contactIfoBox">

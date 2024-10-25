@@ -20,7 +20,6 @@ import userIcon from "../../Assets/Images/userIcon.png";
 import textIcon from "../../Assets/Images/textIcon.png";
 import mailIcom from "../../Assets/Images/mailIcon.png";
 import sideLine from "../../Assets/Images/sideLine.png";
-import earthInHand from "../../Assets/Images/earthInHandeImg.png";
 import aisoliotionBg from "../../Assets/Images/aiSolutaionBg.png";
 import benefitBg from "../../Assets/Images/benefitBg.png";
 import aiSectionCardLogo from "../../Assets/Images/aiSectionCardLogo.svg";
@@ -95,6 +94,8 @@ export default function Home({ activeNav, setActiveNav }) {
       slidesToShow: 4,
       slidesToScroll: 1,
       touchMove: true,
+      autoplay: true,
+      autoplaySpeed: 1500,
       responsive: [
         {
           breakpoint: 1024,
@@ -262,9 +263,72 @@ export default function Home({ activeNav, setActiveNav }) {
             en utilisant les caméras IP existantes de votre parc vidéo.
           </Typography>
           <div className="aiSectionSlideBox">
-            <AiSectionCard Lmargin="Lmargin" title="On Demand" btnText="see more" />
-            <AiSectionCard title="EVA Lite" btnText="see more" />
-            <AiSectionCard Rmargin="Rmargin" title="EVA" btnText="see more" />
+
+
+            <Box className="CAiModelBox Lmargin">
+              <Box className="aiCardImgBox">
+                <img src={aiSectionCardLogo} />
+              </Box>
+              <Box className="aiTextB">
+                <Typography className="aiCardHeader">On Demand</Typography>
+                <Typography className="nSummeryText">
+                  All-in-one AI-driven platform to streamline and enhance business operations for mid-sized companies.
+                </Typography>
+                <div className="HomeBtnBox">
+
+                  <Box className="HeroBtn">
+                    <Typography>REQUEST A QUOTE</Typography>
+                  </Box>
+                  <Box className="WhiteBtn">
+                    <Typography>SEE MORE</Typography>
+                  </Box>
+
+                </div>
+              </Box>
+            </Box>
+
+
+            <Box className="CAiModelBox">
+              <Box className="aiCardImgBox">
+                <img src={aiSectionCardLogo} />
+              </Box>
+              <Box className="aiTextB">
+                <Typography className="aiCardHeader">EVA Lite</Typography>
+                <Typography className="nSummeryText">
+                  All-in-one AI-driven platform to streamline and enhance business operations for mid-sized companies.
+                </Typography>
+                <div className="HomeBtnBox">
+
+                  <Box className="HeroBtn">
+                    <Typography>Try it now</Typography>
+                  </Box>
+                  <Box className="WhiteBtn">
+                    <Typography>Free demo</Typography>
+                  </Box>
+
+                </div>
+              </Box>
+            </Box>
+
+
+            <Box className="CAiModelBox Rmargin">
+              <Box className="aiCardImgBox">
+                <img src={aiSectionCardLogo} />
+              </Box>
+              <Box className="aiTextB">
+                <Typography className="aiCardHeader">EVA</Typography>
+                <Typography className="nSummeryText">
+                  All-in-one AI-driven platform to streamline and enhance business operations for mid-sized companies.
+                </Typography>
+                <div className="HomeBtnBox">
+
+                  <Box className="WhiteBtn">
+                    <Typography>COMING SOON</Typography>
+                  </Box>
+
+                </div>
+              </Box>
+            </Box>
           </div>
         </Box>
 
@@ -282,7 +346,6 @@ export default function Home({ activeNav, setActiveNav }) {
           </div>
 
           <img src={sideLine} className="leftSideLine" />
-          <img src={earthInHand} className="earthInHand" />
         </Box>
 
         {/* contact section */}
