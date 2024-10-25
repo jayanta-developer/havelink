@@ -66,25 +66,20 @@ export default function Home({ activeNav, setActiveNav }) {
     );
   };
 
-  const AiSectionCard = ({ Rmargin, Lmargin }) => {
+  const AiSectionCard = ({ Rmargin, Lmargin, title, btnText }) => {
     return (
       <Box className={`CAiModelBox  ${Lmargin} ${Rmargin}`}>
         <Box className="aiCardImgBox">
           <img src={aiSectionCardLogo} />
         </Box>
         <Box className="aiTextB">
-          <Typography className="aiCardHeader">
-            EVA Lite
-          </Typography>
+          <Typography className="aiCardHeader">{title}</Typography>
           <Typography className="nSummeryText">
             All-in-one AI-driven platform to streamline and enhance business operations for mid-sized companies.
           </Typography>
           <div className="HomeBtnBox">
             <Box className="HeroBtn">
-              <Typography>Try it now</Typography>
-            </Box>
-            <Box className="WhiteBtn">
-              <Typography>See more</Typography>
+              <Typography>{btnText}</Typography>
             </Box>
           </div>
         </Box>
@@ -97,8 +92,9 @@ export default function Home({ activeNav, setActiveNav }) {
       dots: false,
       infinite: true,
       speed: 500,
-      slidesToShow: 5,
+      slidesToShow: 4,
       slidesToScroll: 1,
+      touchMove: true,
       responsive: [
         {
           breakpoint: 1024,
@@ -266,12 +262,10 @@ export default function Home({ activeNav, setActiveNav }) {
             en utilisant les caméras IP existantes de votre parc vidéo.
           </Typography>
           <div className="aiSectionSlideBox">
-            <AiSectionCard Lmargin="Lmargin" />
-            <AiSectionCard />
-            <AiSectionCard Rmargin="Rmargin" />
+            <AiSectionCard Lmargin="Lmargin" title="On Demand" btnText="see more" />
+            <AiSectionCard title="EVA Lite" btnText="see more" />
+            <AiSectionCard Rmargin="Rmargin" title="EVA" btnText="see more" />
           </div>
-          {/* <img src={sideLine} className="leftSideLine" /> */}
-          {/* <img src={sideLine} className="rightSideLine" /> */}
         </Box>
 
 
@@ -296,9 +290,7 @@ export default function Home({ activeNav, setActiveNav }) {
           {/* <img src={contactBg} className="contactBg" /> */}
 
           <Box className="contactTextBox">
-            <Typography className="sectionHeader">
-              Contact Us for a Free Consultation
-            </Typography>
+            <Typography className="sectionHeader">Contact Us for a Free Consultation</Typography>
             <span>
               Videtics propose une suite logicielle qui facilite la surveillance
               des zones protégées, l'investigation à postériori et la prise de

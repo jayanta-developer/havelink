@@ -292,7 +292,7 @@
   flex-direction: column;
   align-items: center;
   position: relative;
-  padding: 12% 2%;
+  padding: 12% 2% 5% 2%;
 }
 
 .benefitSection .leftSideLine {
@@ -772,6 +772,7 @@
   align-items: center;
   padding-top: 100px;
   position: relative;
+  margin-top: 55px;
 }
 .benefitsV1 .leftSideLine {
   top: 162px;
@@ -822,6 +823,7 @@
 }
 .moreESBItem {
   width: 100%;
+  position: relative;
 }
 .homeLineImgBox {
   width: 100%;
@@ -1094,5 +1096,8 @@
   }
   .WhiteBtn {
     padding: 0 30px;
+  }
+  .moreESBItem {
+    left: 77px;
   }
 }

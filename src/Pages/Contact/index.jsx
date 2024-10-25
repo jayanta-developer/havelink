@@ -116,6 +116,7 @@ export default function Contact({ activeNav, setActiveNav }) {
               </Box>
               <Typography variant="h4">LinkedIn</Typography>
               <Typography>
+                <a href="https://www.linkedin.com/company/havelink/"></a>
                 https://www.linkedin.com/company/<br />havelink/
               </Typography>
             </Box>
@@ -228,9 +229,9 @@ export default function Contact({ activeNav, setActiveNav }) {
           </Box>
         </Box>
 
-        <Box className="mapSection">
+        {/* <Box className="mapSection">
           <img src={mapImg} />
-        </Box>
+        </Box> */}
 
         <Footer />
       </Box>
