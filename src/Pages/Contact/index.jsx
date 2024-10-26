@@ -27,6 +27,53 @@ export default function Contact({ activeNav, setActiveNav }) {
   const [formValue, setFormValue] = useState();
   const [emailError, setEmailError] = useState('');
 
+  console.log(formValue);
+
+
+
+
+  const { EmailClient } = require('@azure/communication-email');
+
+  // 1. Use your ACS connection string
+  const connectionString = "endpoint=https://evalite-mailing-service.france.communication.azure.com/;accesskey=29HiZEH7yMc6o0icvX7DsR5bn43uX3Dlihwtpotde6pMbdCJbkVOJQQJ99AJACULyCpsBWk8AAAAAZCS21yL";
+
+  // 2. Create an instance of EmailClient
+  const emailClient = new EmailClient(connectionString);
+
+  async function sendEmail() {
+    try {
+      // 3. Define the sender, content, and recipients
+      const senderAddress = "DoNotReply@d751f8e5-8618-4f2c-81e5-9bc2a22c687b.azurecomm.net";
+      const recipientAddress = "hatem.bouhouche@havelink.ai";
+
+      const emailMessage = {
+        senderAddress: senderAddress,
+        content: {
+          subject: "Test Email from ACS",
+          plainText: "This is the plain text content of the email.",
+          html: `<html><body><h1>Jayanta dey</h1></body></html>`,
+          data: formValue
+        },
+        recipients: {
+          to: [
+            {
+              address: recipientAddress,
+              displayName: "Jayant dey"
+            }
+          ]
+        }
+      };
+
+      // 4. Send the email
+      const poller = await emailClient.beginSend(emailMessage);
+      const response = await poller.pollUntilDone();
+    } catch (error) {
+      console.error("Error sending email:", error);
+    }
+  }
+
+
+
   const restrictedDomains = [
     'gmail.com',
     'yahoo.com',
@@ -223,7 +270,7 @@ export default function Contact({ activeNav, setActiveNav }) {
               </Box>
             </Box>
 
-            <Box className="HeroBtn">
+            <Box className="HeroBtn" onClick={() => sendEmail()}>
               <Typography>Submit now</Typography>
             </Box>
           </Box>
